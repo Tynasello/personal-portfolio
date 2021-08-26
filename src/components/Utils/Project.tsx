@@ -1,99 +1,50 @@
-import React, { useEffect, useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import React, { useState } from "react";
 import styled from "styled-components";
-import { v4 } from "uuid";
+import { ContactLinks } from "../ContactLinks";
+import { Footer } from "../Footer";
+import { Nav } from "../Nav";
 
 interface ProjectProps {
+  headerImg?: string;
   title: string;
-  description: string;
-  img?: any;
-  tags: any;
-  color: string;
-  url?: string;
+  children?: any;
 }
 
 export const Project: React.FC<ProjectProps> = ({
   title,
-  description,
-  img,
-  tags,
-  color,
-  url = "/",
+  children,
+  headerImg,
 }) => {
-  const handleProjectClick = () => {};
-  const [bgColor, setBgColor] = useState(color);
-  useEffect(() => {
-    return;
-  }, [bgColor]);
+  useState(() => {
+    window.scrollTo(0, 0);
+  });
   return (
-    <Container to={url}>
-      <ProjectImg src={img} alt="Project Image"></ProjectImg>
-
-      <ProjectContainer
-        style={{ backgroundColor: bgColor }}
-        onClick={() => {
-          return <Redirect to="/somewhere/else" />;
-        }}
-        onMouseOverCapture={() => {
-          setBgColor("transparent");
-        }}
-        onMouseOutCapture={() => {
-          setBgColor(color);
-        }}
-      >
+    <Container>
+      <Nav projectNav={true}></Nav>
+      <ContactLinks></ContactLinks>
+      <ProjectContainer>
+        <HeaderImg src={headerImg}></HeaderImg>
         <Header>{title}</Header>
-        <TagsContainer>
-          {tags.map((tag: string) => {
-            return <Tag key={v4()}>{tag}</Tag>;
-          })}
-        </TagsContainer>
-        <Description>{description}</Description>
+        {children}
       </ProjectContainer>
+      <Footer></Footer>
     </Container>
   );
 };
-const Container = styled(Link)`
-  position: relative;
-`;
-const ProjectImg = styled.img`
-  z-index: -1;
-  border-radius: 5px;
-  position: absolute;
-  width: 100%;
-  top: 0;
-  &:hover {
-  }
-`;
-
+const Container = styled.div``;
 const ProjectContainer = styled.div`
-  padding: 1.5rem;
-  border-radius: 5px;
-  aspect-ratio: 1;
-  overflow: hidden;
-  & > * {
-    padding: 0.2rem 0;
-  }
+  margin: 6rem auto;
+  width: 40vw;
+`;
+const HeaderImg = styled.img`
+  width: 100%;
+  border-radius: 10px;
   transition: all 0.5s;
-  &:hover {
-    & > * {
-      display: none;
-    }
-  }
 `;
 const Header = styled.h3`
-  font-size: 2em;
+  font-size: 3.4em;
+  font-weight: 500;
+  margin: 1.2rem 0;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid ${({ theme }) => theme.colors.dark};
 `;
-const TagsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`;
-const Tag = styled.p`
-  font-size: 1em;
-  color: ${({ theme }) => theme.colors.primary};
-  background-color: ${({ theme }) => theme.colors.dark};
-
-  padding: 0.6rem 0.4rem;
-  margin: 0.3rem 0.6rem 0.3rem 0;
-  border-radius: 8px;
-`;
-const Description = styled.div``;

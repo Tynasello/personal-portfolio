@@ -1,18 +1,17 @@
 import React from "react";
 import { Project } from "../components/Utils/Project";
 
-import ARProject1 from "../assets/images/Projects/ARProject1.png";
-import ARProject2 from "../assets/images/Projects/ARProject2.jpg";
+import FBProject1 from "../assets/images/Projects/FBProject1.png";
 import { ProjectP } from "../components/Utils/ProjectP";
 import { ProjectSubtitle } from "../components/Utils/ProjectSubtitle";
 import { HighlightSpan } from "../components/Utils/HighlightSpan";
 import { PLink } from "../components/Utils/PLink";
 import styled from "styled-components";
 
-interface ARProjectProps {}
+interface FBProjectProps {}
 
-export const ARProject: React.FC<ARProjectProps> = () => (
-  <Project headerImg={ARProject2} title="Arduino Robot Car">
+export const FBProject: React.FC<FBProjectProps> = () => (
+  <Project headerImg={FBProject1} title="Flappy Bird (Recreation)">
     <ProjectSubtitle>Purpose</ProjectSubtitle>
 
     <ProjectP>
@@ -36,7 +35,6 @@ export const ARProject: React.FC<ARProjectProps> = () => (
       the digital pins allow the use of the HC-08 bluetooth module. The Arduino
       is powered by a powerbank via the USB port.
     </ProjectP>
-    <PImg src={ARProject1} alt="ARProject1"></PImg>
     <ProjectSubtitle>Motor Controller</ProjectSubtitle>
     <ProjectP>
       The <HighlightSpan>L293D Motor Controller Shield </HighlightSpan> operates

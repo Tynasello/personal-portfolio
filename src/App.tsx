@@ -17,7 +17,3 @@ function App() {
 
 export default App;
 const Container = styled.div``;
-const ContentContainer = styled.div`
-  width: 60vw;
-  margin: 2rem auto;
-`;

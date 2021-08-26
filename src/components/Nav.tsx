@@ -3,9 +3,21 @@ import styled from "styled-components";
 
 import logo from "../assets/images/logo.png";
 
-interface NavProps {}
+interface NavProps {
+  projectNav?: boolean;
+}
 
-export const Nav: React.FC<NavProps> = () => {
+export const Nav: React.FC<NavProps> = ({ projectNav }) => {
+  if (projectNav) {
+    return (
+      <NavContainer>
+        <Logo src={logo} alt="logo"></Logo>
+        <NavUl>
+          <NavLi href="#">Home</NavLi>
+        </NavUl>
+      </NavContainer>
+    );
+  }
   return (
     <NavContainer>
       <Logo src={logo} alt="logo"></Logo>

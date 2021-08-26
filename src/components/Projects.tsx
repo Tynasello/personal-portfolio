@@ -1,15 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import { Project } from "./Utils/Project";
+import { ProjectTile } from "./Utils/ProjectTile";
 
-import cvBuilder from "../assets/images/cv-builder.png";
-import blogAPI from "../assets/images/blog-api.jpeg";
-import blogFrontend from "../assets/images/blog-frontend.png";
-import toDoList from "../assets/images/to-do-list.png";
-import arduinoCar from "../assets/images/arduino-car.jpg";
-import colorSorter from "../assets/images/color-sorter.jpg";
-import flappyBird from "../assets/images/flappy-bird.jpg";
-import translationGUI from "../assets/images/translation-gui.jpeg";
+import cvBuilder from "../assets/images/projectTile/cv-builder.png";
+import blogAPI from "../assets/images/projectTile/blog-api.jpeg";
+import blogFrontend from "../assets/images/projectTile/blog-frontend.png";
+import toDoList from "../assets/images/projectTile/to-do-list.png";
+import arduinoCar from "../assets/images/projectTile/arduino-car.jpg";
+import colorSorter from "../assets/images/projectTile/color-sorter.jpg";
+import flappyBird from "../assets/images/projectTile/flappy-bird.jpg";
+import translationGUI from "../assets/images/projectTile/translation-gui.jpeg";
 
 interface ProjectsProps {
   id: string;
@@ -23,7 +23,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
         {/* <Line></Line> */}
       </Header>
       <ProjectsContainer>
-        <Project
+        <ProjectTile
           title="CV Builder"
           description="
                       A React web application to create your own CV / resume.
@@ -31,9 +31,9 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
           img={cvBuilder}
           tags={["JavaScript", "React"]}
           color="#607e78E6"
-        ></Project>
+        ></ProjectTile>
 
-        <Project
+        <ProjectTile
           title="Blog API"
           description="
                       Blog API created with NodeJS, Express and MongoDB Atlas. API supports 
@@ -45,9 +45,9 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
           img={blogAPI}
           tags={["NodeJS", "Express", "MongoDB", "Mongoose", "JWT", "Heroku"]}
           color="#ed524cE6"
-        ></Project>
+        ></ProjectTile>
 
-        <Project
+        <ProjectTile
           title="Blog Frontend"
           description="
                     I previosuly built a REST API for creating custom blogs. This project
@@ -56,9 +56,9 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
           img={blogFrontend}
           tags={["TypeScript", "React"]}
           color="#12b0bdE6"
-        ></Project>
+        ></ProjectTile>
 
-        <Project
+        <ProjectTile
           title="To-do App"
           description="
                       Add custom tasks with their own descriptions, due dates, and priority
@@ -70,11 +70,11 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
           img={toDoList}
           tags={["JavaScript", "HTML/CSS", "Webpack"]}
           color="#c6b05bE6"
-        ></Project>
+        ></ProjectTile>
 
         {/*  */}
 
-        <Project
+        <ProjectTile
           title="Arduino Robot"
           description="
                         The purpose of this project was to create a fully
@@ -86,9 +86,9 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
           tags={["Arduino", "C++"]}
           color="#3954a0E6"
           url="/ARProject"
-        ></Project>
+        ></ProjectTile>
 
-        <Project
+        <ProjectTile
           title="Arduino Color Sorter"
           description="
                         The goal of this project was to create a system designed
@@ -98,10 +98,10 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
           img={colorSorter}
           tags={["Arduino", "C++"]}
           color="#d8b83bE6"
-          url="/"
-        ></Project>
+          url="/CSProject"
+        ></ProjectTile>
 
-        <Project
+        <ProjectTile
           title="Flappy Bird (Recreation)"
           description="
                         I recreated the popular game 'Flappy Bird'. I programmed
@@ -110,10 +110,10 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
           img={flappyBird}
           tags={["Python", "Pygame"]}
           color="#30b783E6"
-          url="/"
-        ></Project>
+          url="/FBProject"
+        ></ProjectTile>
 
-        <Project
+        <ProjectTile
           title="Word Translation GUI"
           description="     
                         I created a GUI (Graphical User Interface) in Python
@@ -125,8 +125,8 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
           img={translationGUI}
           tags={["Python", "GUI"]}
           color="#e88849E6"
-          url="/"
-        ></Project>
+          url="/WTProject"
+        ></ProjectTile>
       </ProjectsContainer>
     </Container>
   );

@@ -2,6 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 import resume from "../assets/Resume.pdf";
+import { HighlightSpan } from "./Utils/HighlightSpan";
+import { PLink } from "./Utils/PLink";
 
 interface AboutProps {
   id: string;
@@ -28,21 +30,21 @@ export const About: React.FC<AboutProps> = ({ id }) => {
             many of the problems and algorithms I have been working on. Feel
             free to contact me at any time via{" "}
             <HighlightSpan>
-              <Link href="mailto:tynasello@gmail.com" target="_blank">
+              <PLink href="mailto:tynasello@gmail.com" target="_blank">
                 email.{}
-              </Link>
+              </PLink>
             </HighlightSpan>{" "}
             I also encourage you to view my{" "}
             <HighlightSpan>
-              <Link href="https://github.com/tynasello" target="_blank">
+              <PLink href="https://github.com/tynasello" target="_blank">
                 github.{}
-              </Link>
+              </PLink>
             </HighlightSpan>{" "}
             account and{" "}
             <HighlightSpan>
-              <Link href={resume} target="_blank">
+              <PLink href={resume} target="_blank">
                 resume.{}
-              </Link>
+              </PLink>
             </HighlightSpan>
           </ContentP>
         </ContentSection>
@@ -117,19 +119,5 @@ const Tag = styled.p`
     background-color: ${({ theme }) => theme.colors.secondary};
     border: 2px solid transparent;
     transform: scale(1.05);
-  }
-`;
-
-const HighlightSpan = styled.span`
-  color: ${({ theme }) => theme.colors.tertiary};
-`;
-
-const Link = styled.a`
-  color: ${({ theme }) => theme.colors.tertiary};
-  cursor: pointer;
-  transition: all 0.5s;
-
-  &:hover {
-    color: ${({ theme }) => theme.colors.secondary};
   }
 `;
