@@ -1,7 +1,7 @@
 /*--------------------------------------------------------------*/
 
-import React from "react";
-import { Route, Switch } from "react-router-dom";
+import React, { SyntheticEvent } from "react";
+import { Redirect, Route, Switch } from "react-router-dom";
 
 import { ARProject } from "./pages/ARProject";
 import { CSProject } from "./pages/CSProject";

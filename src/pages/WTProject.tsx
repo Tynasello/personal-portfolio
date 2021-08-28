@@ -2,6 +2,11 @@ import React from "react";
 import { Project } from "../components/Utils/Project";
 
 import WTProject1 from "../assets/images/Projects/WTProject1.png";
+import WTProject2 from "../assets/images/Projects/WTProject2.png";
+
+import WTDMG from "../assets/video/WT.dmg";
+import WTEXE from "../assets/video/WT.exe";
+
 import { ProjectP } from "../components/Utils/ProjectP";
 import { ProjectSubtitle } from "../components/Utils/ProjectSubtitle";
 import { HighlightSpan } from "../components/Utils/HighlightSpan";
@@ -12,56 +17,53 @@ interface WTProjectProps {}
 
 export const WTProject: React.FC<WTProjectProps> = () => (
   <Project headerImg={WTProject1} title="Word Translation GUI">
-    <ProjectSubtitle>Purpose</ProjectSubtitle>
-
     <ProjectP>
-      The purpose of this project was to create a fully functional robot using
-      an <HighlightSpan>Arduino microcontroller.</HighlightSpan> The robot
-      performs certain maneuvers based on input from a Bluetooth terminal
-      application.The robot has an optional "autonomous mode" which can be
-      activated by typing the character 'a' through a Bluetooth terminal on a
-      cellular device. When <HighlightSpan>autonomous</HighlightSpan> mode is
-      activated, the robot will drive forward until the ultrasonic sensor on the
-      front of the chassis detects that an object is within 10 cm. The robot
-      will then redirect its route and continue driving forward until another
-      object is encountered.
-    </ProjectP>
-    <ProjectSubtitle>Micro Controller</ProjectSubtitle>
-    <ProjectP>
-      The Arduino Uno is a microcontroller that is responsible for commanding
-      all parts of the robot. The Arduino has digital input/output pins and
-      analog pins that are responsible for sending and receiving data. The
-      analog pins of the arduino allow the use of the ultrasonic sensor while
-      the digital pins allow the use of the HC-08 bluetooth module. The Arduino
-      is powered by a powerbank via the USB port.
-    </ProjectP>
-    <ProjectSubtitle>Motor Controller</ProjectSubtitle>
-    <ProjectP>
-      The <HighlightSpan>L293D Motor Controller Shield </HighlightSpan> operates
-      the two motors on the chassis, receiving instructions from the Arduino
-      Uno. The L293D allows wheel movement at various speeds. Motor wires are
-      connected to the M1 (DC Motor 1) and M3 (DC Motor 2) terminal blocks,
-      allowing control via the Arduino. The shield attaches directly on top of
-      the Arduino and plugs into the input/output pins. Since the shield blocks
-      direct access to the arduino's pins, wires were soldered onto the shield
-      to allow the use of the pins, which are essential to use of the bluetooth
-      module, breadboard and ultrasonic sensor.
-    </ProjectP>
-
-    <ProjectSubtitle>Coding</ProjectSubtitle>
-    <ProjectP>
-      The program to control this robot was written in the{" "}
+      The code for this project was written in{" "}
+      <HighlightSpan>Python</HighlightSpan> leveraging the{" "}
+      <HighlightSpan>pyqt</HighlightSpan> and{" "}
+      <HighlightSpan>googletrans</HighlightSpan> libraries. The pyqt library is
+      a python binding for a C++ toolkit name Qt which includes various
+      libraries and development tools for the purpose of creating GUIs. The
+      googletrans library allows word translation functionality. The GUI prompts
+      a user to input a sentence. Once completed, a list of 11 languages is
+      given. The user's entry is then translated into the chosen language and
+      displayed. The user can then select for a different translation or quit
+      the GUI. The tutorials on{" "}
       <HighlightSpan>
-        <PLink href="https://www.arduino.cc/">Arduino IDE</PLink>
-      </HighlightSpan>{" "}
-      using the programming language C++. The AFMotor.h library was included to
-      provide simultaneous speed and directional control for the motors
-      alongside the L293D shield. The NewPing.h library was included to
-      incorporate ultrasonic sensor functionality. Lastly, the SoftwareSerial.h
-      library was included to allow serial communication between a mobile device
-      and the Arduino via the HC-08. This allows the robot to move in certain
-      directions based on input data received from a device. A link to my code
-      for this project can be found below.
+        <PLink href="https://realpython.com/python-pyqt-gui-calculator/">
+          realpython.com{" "}
+        </PLink>
+      </HighlightSpan>
+      and{" "}
+      <HighlightSpan>
+        <PLink href="https://www.pythonguis.com/pyqt-tutorial/">
+          learnpyqt.com
+        </PLink>
+      </HighlightSpan>
+      assisted me in the effective use of pyqt and in the creation of .dmg and
+      .exe files for users. A link to my code for this project can be found{" "}
+      <HighlightSpan>
+        <PLink href="https://github.com/Tynasello/word-translator">here</PLink>
+      </HighlightSpan>
+      .
+    </ProjectP>
+
+    <PImg src={WTProject2} alt="WTProject2"></PImg>
+
+    <ProjectSubtitle>Final Product</ProjectSubtitle>
+    <ProjectP>
+      I encourage you to download my GUI and try it yourself. Downloads are
+      available for Mac and Windows users.
+      <br />
+      <br />
+      <HighlightSpan>
+        <PLink href={WTDMG}> Mac </PLink>
+      </HighlightSpan>
+      <br />
+      <br />
+      <HighlightSpan>
+        <PLink href={WTEXE}> Windows </PLink>
+      </HighlightSpan>
     </ProjectP>
   </Project>
 );

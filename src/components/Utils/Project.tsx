@@ -38,7 +38,6 @@ const ProjectContainer = styled.div`
 `;
 const HeaderImg = styled.img`
   width: 100%;
-  border-radius: 10px;
   transition: all 0.5s;
 `;
 const Header = styled.h3`
