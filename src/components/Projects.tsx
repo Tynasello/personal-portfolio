@@ -2,14 +2,15 @@ import React from "react";
 import styled from "styled-components";
 import { ProjectTile } from "./Utils/ProjectTile";
 
-import cvBuilder from "../assets/images/projectTile/cv-builder.png";
-import blogAPI from "../assets/images/projectTile/blog-api.jpeg";
-import blogFrontend from "../assets/images/projectTile/blog-frontend.png";
-import toDoList from "../assets/images/projectTile/to-do-list.png";
-import arduinoCar from "../assets/images/projectTile/arduino-car.jpg";
-import colorSorter from "../assets/images/projectTile/color-sorter.jpg";
-import flappyBird from "../assets/images/projectTile/flappy-bird.jpg";
-import translationGUI from "../assets/images/projectTile/translation-gui.jpeg";
+import CVProject from "../assets/images/projectTile/CVProject.png";
+import APProject from "../assets/images/projectTile/APProject.jpeg";
+import CPProject from "../assets/images/projectTile/CPProject.png";
+import BFProject from "../assets/images/projectTile/BFProject.png";
+import TDProject from "../assets/images/projectTile/TDProject.png";
+import ACProject from "../assets/images/projectTile/ACProject.jpg";
+import CSProject from "../assets/images/projectTile/CSProject.jpg";
+import FBProject from "../assets/images/projectTile/FBProject.jpg";
+import WTProject from "../assets/images/projectTile/WTProject.jpeg";
 
 interface ProjectsProps {
   id: string;
@@ -26,9 +27,9 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
         <ProjectTile
           title="CV Builder"
           description="
-                      A React web application to create your own CV / resume.
+                      A React web application to create your own CV / resumé.
                       "
-          img={cvBuilder}
+          img={CVProject}
           tags={["JavaScript", "React"]}
           color="#607e78E6"
           url="https://tynasello.github.io/cv-builder/"
@@ -38,26 +39,33 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
         <ProjectTile
           title="Blog API"
           description="
-                      Blog API created with NodeJS, Express and MongoDB Atlas. API supports 
-                      personal blogs with admin-only features, including
-                      creating, deleting and editing posts, aswell as deleting comments.
-                      JWT's were used to authenticate users, allowing login functionality
-                      and access to protected routes.
+                      A Node/Express REST API for creating personal blogs.
                       "
-          img={blogAPI}
-          tags={["NodeJS", "Express", "MongoDB", "Mongoose", "JWT", "Heroku"]}
+          img={APProject}
+          tags={["NodeJS", "Express", "API", "MongoDB", "JWT", "Heroku"]}
           color="#ed524cE6"
           url="https://github.com/Tynasello/blog-api"
           githubLink="https://github.com/Tynasello/blog-api"
         ></ProjectTile>
 
         <ProjectTile
+          title="Competitive Programming Practice"
+          description="
+                      Github repository containing solutions to practice programming problems I have solved or am currently working on.
+                      "
+          img={CPProject}
+          tags={["CP", "Python"]}
+          color="#f7ba42e6"
+          url="https://github.com/Tynasello/cp-practice"
+          githubLink="https://github.com/Tynasello/cp-practice"
+        ></ProjectTile>
+
+        <ProjectTile
           title="Blog Frontend"
           description="
-                    I previosuly built a REST API for creating custom blogs. This project
-                    is an example frontend that shows how the API can be utilized.
+                      A React TypeScript frontend for a blog project using custom blog API.
                       "
-          img={blogFrontend}
+          img={BFProject}
           tags={["TypeScript", "React"]}
           color="#12b0bdE6"
           url="https://tynasello.github.io/blog-frontend/"
@@ -67,15 +75,11 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
         <ProjectTile
           title="To-do App"
           description="
-                      Add custom tasks with their own descriptions, due dates, and priority
-                      levels. Filter through your tasks via project subfolders, as well as the
-                      All Tasks, Today, and This Week subfolders. Subfolders and their tasks
-                      are stored locally so user data is not lost when closing or refreshing
-                      browser.
+                      A To-do list app where users can add custom tasks with their own descriptions, due dates, and priority levels.
                       "
-          img={toDoList}
+          img={TDProject}
           tags={["JavaScript", "HTML/CSS", "Webpack"]}
-          color="#c6b05bE6"
+          color="#523a59e6"
           url="https://tynasello.github.io/to-do-app/"
           githubLink="https://github.com/Tynasello/to-do-app"
         ></ProjectTile>
@@ -83,15 +87,13 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
         {/*  */}
 
         <ProjectTile
-          title="Arduino Robot"
+          title="Arduino Robot Car"
           description="
-                        The purpose of this project was to create a fully
-                        functional robot using an Arduino microcontroller. The
-                        robot performs certain maneuvers based on input from a
-                        Bluetooth terminal application.
+                        An Arduino Uno controlled Robot car that performs certain maneuvers based on input from a
+                        Bluetooth terminal application. Optional autonomous mode utilizing ultrasonic sensor.
                       "
-          img={arduinoCar}
-          tags={["Arduino", "C++"]}
+          img={ACProject}
+          tags={["C++", "Arduino"]}
           color="#3954a0E6"
           redirect="/ARProject"
           githubLink="https://github.com/Tynasello/arduino-robot"
@@ -100,13 +102,12 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
         <ProjectTile
           title="Arduino Color Sorter"
           description="
-                        The goal of this project was to create a system designed
-                        to sort objects based on color. Red, green, and yellow
-                        Skittles were sorted with the use of two micro servos
+                        An Arudino Uno controlled robot which sorts red, green, and yellow
+                        Skittles with the use of two micro servos
                         and a TCS230 color sensor."
-          img={colorSorter}
-          tags={["Arduino", "C++"]}
-          color="#d8b83bE6"
+          img={CSProject}
+          tags={["C++", "Arduino"]}
+          color="#e44c64e6"
           redirect="/CSProject"
           githubLink="https://github.com/Tynasello/color-sorter"
         ></ProjectTile>
@@ -114,10 +115,10 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
         <ProjectTile
           title="Flappy Bird (Recreation)"
           description="
-                        I recreated the popular game 'Flappy Bird'. I programmed
+                        Recreating the popular game 'Flappy Bird'. I programmed
                         the game in python utilizing the pygame library.
                       "
-          img={flappyBird}
+          img={FBProject}
           tags={["Python", "Pygame"]}
           color="#30b783E6"
           redirect="/FBProject"
@@ -128,14 +129,12 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
           title="Word Translation GUI"
           description="     
                         I created a GUI (Graphical User Interface) in Python
-                        using the PyQt5 and googletrans libraries. The GUI
-                        prompts the user to enter a sentence. It then displays
-                        the translation in a variety of different languages
-                        based on your selection.
+                        employing the PyQt5 and googletrans libraries. The GUI
+                        displays the translation of user inputs in selected languages.
                       "
-          img={translationGUI}
-          tags={["Python", "GUI"]}
-          color="#e88849E6"
+          img={WTProject}
+          tags={["Python", "GUI", "PyQt"]}
+          color="#F07411e6"
           redirect="/WTProject"
           githubLink="https://github.com/Tynasello/word-translator"
         ></ProjectTile>
@@ -145,15 +144,24 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
 };
 const Container = styled.div`
   padding: 5rem 0;
+  @media (max-width: 1250px) {
+    padding: 0;
+  }
 `;
 const Header = styled.div`
-  padding: 2rem 0;
+  padding-bottom: 2rem;
   display: flex;
 `;
 const Title = styled.h1``;
 
 const ProjectsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 1.8rem;
+  column-gap: 1.8rem;
+
+  > * {
+    width: 330px;
+  }
 `;

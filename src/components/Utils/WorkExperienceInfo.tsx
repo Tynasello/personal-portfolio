@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { v4 } from "uuid";
 
 import { GiStrikingArrows } from "react-icons/gi";
+import { HighlightSpan } from "./HighlightSpan";
 
 interface WorkExperienceInfoProps {
   selectorId: string;
@@ -24,8 +25,15 @@ export const WorkExperienceInfo: React.FC<WorkExperienceInfoProps> = ({
   return (
     <InfoContainer id={selectorId}>
       <Header>
-        <Position>{position} at</Position>
-        <Location> {location}</Location>
+        {position} at{" "}
+        <HighlightSpan
+          style={{
+            paddingLeft: ".1rem",
+            color: "#7f5bf0",
+          }}
+        >
+          {location}
+        </HighlightSpan>
       </Header>
       <Dates>{dates}</Dates>
       <PointsSection>
@@ -55,21 +63,17 @@ const InfoContainer = styled.div`
   & > * {
     padding: 0.3rem 0;
   }
+  @media (max-width: 1300px) {
+    padding: 1rem 0;
+  }
 `;
 const Header = styled.div`
-  display: flex;
+  font-size: clamp(20px, 2vw, 100px);
 `;
-const Position = styled.h1`
-  font-size: 2.2em;
-`;
-const Location = styled.h1`
-  padding-left: 0.6rem;
-  font-size: 2.2em;
-  color: ${({ theme }) => theme.colors.secondary};
-`;
+
 const Dates = styled.h3`
-  font-size: 1.4em;
   color: ${({ theme }) => theme.colors.light};
+  font-size: clamp(18px, 1.4vw, 100px);
 `;
 const PointsSection = styled.div`
   color: ${({ theme }) => theme.colors.light};
@@ -82,11 +86,11 @@ const PointContainer = styled.div`
   font-size: 1em;
 `;
 const Icon = styled.i`
-  font-size: 1.2em;
   padding-right: 0.6rem;
   color: ${({ theme }) => theme.colors.secondary};
+  font-size: clamp(18px, 1vw, 100px);
 `;
 
 const PointP = styled.p`
-  font-size: 1.2em;
+  font-size: clamp(16px, 1.2vw, 100px);
 `;

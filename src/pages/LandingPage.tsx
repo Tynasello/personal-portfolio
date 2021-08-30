@@ -31,4 +31,7 @@ const Container = styled.div``;
 const ContentContainer = styled.div`
   width: 60vw;
   margin: 2rem auto;
+  @media (max-width: 870px) {
+    width: 75vw;
+  }
 `;

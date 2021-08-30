@@ -35,13 +35,17 @@ const Container = styled.div``;
 const ProjectContainer = styled.div`
   margin: 6rem auto;
   width: 40vw;
+  @media (max-width: 800px) {
+    width: 60vw;
+  }
 `;
 const HeaderImg = styled.img`
   width: 100%;
   transition: all 0.5s;
 `;
+
 const Header = styled.h3`
-  font-size: 3.4em;
+  font-size: clamp(35px, 3vw, 100px);
   font-weight: 500;
   margin: 1.2rem 0;
   padding: 0.4rem 0;

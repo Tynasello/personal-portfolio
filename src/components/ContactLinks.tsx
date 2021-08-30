@@ -29,6 +29,7 @@ export const ContactLinks: React.FC<ContactLinksProps> = () => {
 const NavContainer = styled.div`
   position: fixed;
   bottom: 0;
+  z-index: 19;
 `;
 const NavUl = styled.ul`
   width: 8rem;
@@ -36,6 +37,15 @@ const NavUl = styled.ul`
   flex-direction: column;
   align-items: center;
   margin-bottom: 4rem;
+
+  @media (max-width: 870px) {
+    width: 4rem;
+    margin-bottom: 1rem;
+  }
+  @media (max-width: 415px) {
+    width: 2rem;
+    margin-bottom: 0;
+  }
 `;
 const NavLi = styled.a`
   font-size: 2rem;
@@ -43,8 +53,15 @@ const NavLi = styled.a`
   cursor: pointer;
   transition: all 0.5s;
   color: ${({ theme }) => theme.colors.primary};
-
+  font-size: clamp(25px, 1.8vw, 100vw);
+  @media (max-width: 870px) {
+    font-size: 1.5rem;
+  }
+  @media (max-width: 415px) {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+  }
   &:hover {
-    transform: scale(1.1);
+    transform: translateY(-4px);
   }
 `;

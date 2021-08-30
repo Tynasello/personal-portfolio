@@ -23,7 +23,7 @@ const GlobalStyle = createGlobalStyle`
         z-index: 1;
     }
 
-    /* Miscellaneous resets */
+    Miscellaneous resets
     body {
         line-height: 1;
     }
@@ -40,12 +40,14 @@ const GlobalStyle = createGlobalStyle`
     optgroup,
     select,
     textarea {
-    font-family: inherit; /* 1 */
-    font-size: 100%; /* 1 */
-    line-height: 1.15; /* 1 */
-    margin: 0; /* 2 */
+        font-family: inherit; /* 1 */
+        font-size: 100%; /* 1 */
+        line-height: 1.15; /* 1 */
+        margin: 0; /* 2 */
     }
-
+    html{
+        scroll-behavior: smooth;
+    }
     body{
         font-family: "Source Sans Pro", sans-serif;
         background-color: #16161a;
@@ -54,7 +56,9 @@ const GlobalStyle = createGlobalStyle`
         font-weight: 700;
     }
     h1,h2,h3, h4{
-        font-size: 4rem;
+        font-size: clamp(50px, 3.5vw, 100px);
+    }
+        
     }
     p{
         font-size: 1.6rem;
@@ -63,7 +67,13 @@ const GlobalStyle = createGlobalStyle`
         border-left: 3px solid #7f5bf0;
         margin-left:-3px;
         background-color: #383a61;
-        color:#fffffe
+        color:#fffffe;
+        @media (max-width: 1300px) {
+            border-left: none;
+            margin-left:0;
+            border-bottom: 3px solid #7f5bf0;
+            margin-bottom:-3px;
+        }
     }
     
 `;

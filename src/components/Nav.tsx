@@ -3,6 +3,8 @@ import styled from "styled-components";
 
 import logo from "../assets/images/logo.png";
 
+import { HashLink } from "react-router-hash-link";
+
 interface NavProps {
   projectNav?: boolean;
 }
@@ -11,20 +13,26 @@ export const Nav: React.FC<NavProps> = ({ projectNav }) => {
   if (projectNav) {
     return (
       <NavContainer>
-        <Logo src={logo} alt="logo"></Logo>
+        <LogoLink href="/">
+          <Logo src={logo} alt="logo"></Logo>
+        </LogoLink>
         <NavUl>
-          <NavLi href="#">Home</NavLi>
+          <NavLi to="/">Home</NavLi>
         </NavUl>
       </NavContainer>
     );
   }
+
   return (
     <NavContainer>
-      <Logo src={logo} alt="logo"></Logo>
+      <LogoLink href="/">
+        <Logo src={logo} alt="logo"></Logo>
+      </LogoLink>
+
       <NavUl>
-        <NavLi href="#about">About</NavLi>
-        <NavLi href="#projects">Projects</NavLi>
-        <NavLi href="#work">Work Experience</NavLi>
+        <NavLi to="#about">About</NavLi>
+        <NavLi to="#projects">Projects</NavLi>
+        <NavLi to="#work">Work Experience</NavLi>
       </NavUl>
     </NavContainer>
   );
@@ -38,15 +46,33 @@ const NavContainer = styled.div`
   align-items: center;
   padding: 1rem 5rem;
   font-size: 1.2rem;
+
+  @media (max-width: 750px) {
+    padding: 1rem 2rem;
+    > * > a {
+      padding: 0 0.5rem;
+      font-size: 1.1rem;
+    }
+  }
+  @media (max-width: 400px) {
+    padding: 0.8rem;
+    > * > a {
+      font-size: 0.8rem;
+    }
+  }
+`;
+const LogoLink = styled.a`
+  cursor: pointer;
 `;
 const Logo = styled.img`
+  min-width: 50px;
   width: 4vw;
 `;
 
 const NavUl = styled.div`
   display: flex;
 `;
-const NavLi = styled.a`
+const NavLi = styled(HashLink)`
   padding: 0 1rem;
   cursor: pointer;
   transition: all 0.5s;

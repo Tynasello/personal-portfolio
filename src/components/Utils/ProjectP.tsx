@@ -10,7 +10,7 @@ export const ProjectP: React.FC<ProjectPProps> = ({ children }) => {
 };
 const P = styled.p`
   color: rgba(255, 255, 255, 0.85);
-  font-size: 1.4em;
+  font-size: clamp(18px, 1.4vw, 100px);
   font-weight: 100;
   line-height: 1.3em;
 `;

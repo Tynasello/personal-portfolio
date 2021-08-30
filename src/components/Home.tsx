@@ -24,27 +24,45 @@ const HomeContainer = styled.div`
   align-items: center;
   justify-content: center;
   padding: 3rem 0;
+  @media (max-width: 1250px) {
+    flex-direction: column;
+  }
 `;
 const ContentContainer = styled.div`
-  padding-right: 5rem;
   & > * {
     padding: 0.5rem 0;
   }
+  @media (max-width: 1250px) {
+    > * {
+      text-align: center;
+    }
+  }
 `;
 const Header = styled.h1`
-  font-size: 5em;
+  font-size: clamp(70px, 5vw, 80px);
+  @media (max-width: 420px) {
+    font-size: 3.5rem;
+  }
 `;
 const Position = styled.h2`
   color: ${({ theme }) => theme.colors.light};
-  font-size: 2.5em;
+  font-size: clamp(35px, 2.4vw, 100px);
+  @media (max-width: 420px) {
+    font-size: 2rem;
+  }
 `;
 const Description = styled.h3`
-  font-size: 1.6em;
+  font-size: clamp(25px, 1.6vw, 70px);
   color: ${({ theme }) => theme.colors.light};
+  @media (max-width: 420px) {
+    font-size: 1.5rem;
+  }
 `;
 
 const ImageContainer = styled.div``;
 
 const ProfileImage = styled.img`
   width: 35vw;
+  min-width: 350px;
+  padding-top: 2rem;
 `;

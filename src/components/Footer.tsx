@@ -19,4 +19,7 @@ const FooterContent = styled.h3`
   text-align: center;
   font-size: 1em;
   color: ${({ theme }) => theme.colors.light};
+  @media (max-width: 600px) {
+    font-size: 0.8rem;
+  }
 `;
