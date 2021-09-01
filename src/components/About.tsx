@@ -7,11 +7,12 @@ import { PLink } from "./Utils/PLink";
 
 interface AboutProps {
   id: string;
+  classList: string;
 }
 
-export const About: React.FC<AboutProps> = ({ id }) => {
+export const About: React.FC<AboutProps> = ({ id, classList }) => {
   return (
-    <Container id={id}>
+    <Container id={id} className={classList}>
       <Header>
         <Title>About Me</Title>
         {/* <Line></Line> */}
@@ -101,6 +102,9 @@ const AboutContainer = styled.div`
 const ContentSection = styled.div`
   padding-right: 2rem;
   padding-bottom: 2rem;
+  @media (max-width: 1250px) {
+    padding: 0;
+  }
 `;
 const ContentP = styled.p`
   font-size: 1.4em;
@@ -115,6 +119,12 @@ const StackSection = styled.div`
 const StackHeader = styled.h3`
   font-size: 1.5em;
   padding-bottom: 1rem;
+  @media (max-width: 1250px) {
+    padding-top: 2rem;
+  }
+  @media (max-width: 530px) {
+    padding-top: 0;
+  }
 `;
 
 const TagsContainer = styled.div`

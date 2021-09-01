@@ -11,6 +11,7 @@ export const ProjectSubtitle: React.FC<ProjectSubtitleProps> = ({
   return <Header>{children}</Header>;
 };
 const Header = styled.h3`
-  font-size: clamp(22px, 1.6vw, 100px);
-  padding: 1.5rem 0;
+  font-size: clamp(22px, 1.3vw, 100px);
+  padding-top: 1.5rem;
+  padding-bottom: 0.8rem;
 `;

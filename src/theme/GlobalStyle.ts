@@ -40,10 +40,10 @@ const GlobalStyle = createGlobalStyle`
     optgroup,
     select,
     textarea {
-        font-family: inherit; /* 1 */
-        font-size: 100%; /* 1 */
-        line-height: 1.15; /* 1 */
-        margin: 0; /* 2 */
+        font-family: inherit; 
+        font-size: 100%; 
+        line-height: 1.15; 
+        margin: 0; 
     }
     html{
         scroll-behavior: smooth;
@@ -75,7 +75,91 @@ const GlobalStyle = createGlobalStyle`
             margin-bottom:-3px;
         }
     }
-    
+    .fadein{
+        transform:translateY(30%);
+    }
+    .fadeInActive{ 
+        transform:translateY(0%);
+        transition:1s ease-out;
+    }
+    /* Hamburger nav design from Tyler Potts*/
+    .hamburger{
+        display:block;
+        position:absolute;
+        user-select: none;
+        appearance:none;
+        border:none;
+        outline:none;
+        cursor:pointer;
+        background:none;
+        margin-top:6px;
+        right: 2rem;
+        z-index:11;
+
+    }
+    .hamburger.is-active{
+        position:fixed;
+    }
+    .hamburger:hover span:nth-child(2){
+        transform:translateX(8px);
+        background-color: #7f5bf0;
+    }
+    .hamburger.is-active span:nth-child(1){
+        transform:translate(0,-1px)rotate(45deg);
+    }
+    .hamburger.is-active span:nth-child(2){
+        opacity: 0;
+        transform:translateX(-15px);
+    }
+    .hamburger.is-active span:nth-child(3){
+        transform:translate(-2px,2px)rotate(-45deg);
+    }
+    .hamburger span{
+        display:block;
+        width: 30px;
+        height: 3px;
+        margin-bottom:6px;
+        position: relative;
+        background-color: #fffffe;
+        border-radius:6px;
+        transform-origin: 0 0;
+        transition: .4s;
+    }   
+    .hamburger.is-active:hover span{
+        background-color: #7f5bf0;
+    }  
+   
+    .modal{
+        display: none;
+    }
+    .modal-active{
+        position: absolute;
+        top:0;
+        right: 0;
+        height: 100vh;
+        width: 100vw;
+        position: fixed;
+        background-color:#383847;
+        z-index:10;
+        display: flex;
+        &>*{
+            flex-direction: column;
+            padding: 8rem 4rem;
+            @media (max-width: 370px) {
+                padding: 4rem;
+            }
+            &>*{
+                padding: 1rem 0;
+                font-size: 2rem;
+                @media (max-width: 450px) {
+                    font-size: 1.5rem;
+                }
+                &:hover{
+                    color:#7f5bf0
+                }
+            }
+        }
+    }
 `;
 /*--------------------------------------------------------------*/
 export default GlobalStyle;

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { SyntheticEvent, useEffect, useState } from "react";
 import styled from "styled-components";
 
 import logo from "../assets/images/logo.png";
+import modalWave from "../assets/images/modalwave.svg";
 
 import { HashLink } from "react-router-hash-link";
 
@@ -10,6 +11,26 @@ interface NavProps {
 }
 
 export const Nav: React.FC<NavProps> = ({ projectNav }) => {
+  const [width, setWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const hamburger = document.querySelector(".hamburger");
+    const modalDiv = document.getElementById("modal");
+    hamburger?.addEventListener("click", () => {
+      hamburger.classList.toggle("is-active");
+      modalDiv!.classList.toggle("modal");
+      modalDiv!.classList.toggle("modal-active");
+    });
+    window.addEventListener("resize", () => {
+      setWidth(window.innerWidth);
+    });
+  });
+  const modalLinkClick = (e: SyntheticEvent) => {
+    const hamburger = document.querySelector(".hamburger");
+    hamburger!.classList.toggle("is-active");
+    document.getElementById("modal")?.classList.toggle("modal-active");
+    document.getElementById("modal")?.classList.toggle("modal");
+  };
+
   if (projectNav) {
     return (
       <NavContainer>
@@ -22,9 +43,38 @@ export const Nav: React.FC<NavProps> = ({ projectNav }) => {
       </NavContainer>
     );
   }
+  if (width < 600) {
+    return (
+      <NavContainer className={"navContainer"}>
+        <LogoLink href="/">
+          <Logo src={logo} alt="logo"></Logo>
+        </LogoLink>
+
+        <ul className={"hamburger"}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </ul>
+        <div id={"modal"} className={"modal"}>
+          <NavUl>
+            <NavLi onClick={(e) => modalLinkClick(e)} to="#about">
+              About
+            </NavLi>
+            <NavLi onClick={(e) => modalLinkClick(e)} to="#projects">
+              Projects
+            </NavLi>
+            <NavLi onClick={(e) => modalLinkClick(e)} to="#work">
+              Work Experience
+            </NavLi>
+            <ModalImg src={modalWave} alt="logo"></ModalImg>
+          </NavUl>
+        </div>
+      </NavContainer>
+    );
+  }
 
   return (
-    <NavContainer>
+    <NavContainer className={"navContainer"}>
       <LogoLink href="/">
         <Logo src={logo} alt="logo"></Logo>
       </LogoLink>
@@ -44,34 +94,31 @@ const NavContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 5rem;
   font-size: 1.2rem;
+  padding: 1rem 5rem;
 
-  @media (max-width: 750px) {
+  @media (max-width: 600px) {
     padding: 1rem 2rem;
-    > * > a {
-      padding: 0 0.5rem;
-      font-size: 1.1rem;
-    }
-  }
-  @media (max-width: 400px) {
-    padding: 0.8rem;
-    > * > a {
-      font-size: 0.8rem;
-    }
   }
 `;
 const LogoLink = styled.a`
   cursor: pointer;
 `;
 const Logo = styled.img`
-  min-width: 50px;
+  min-width: 60px;
   width: 4vw;
+`;
+const ModalImg = styled.img`
+  position: absolute;
+  bottom: -2rem;
+  left: 0;
+  height: 60vh;
 `;
 
 const NavUl = styled.div`
   display: flex;
 `;
+
 const NavLi = styled(HashLink)`
   padding: 0 1rem;
   cursor: pointer;

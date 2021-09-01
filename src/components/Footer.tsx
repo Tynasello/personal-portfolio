@@ -12,7 +12,7 @@ export const Footer: React.FC<FooterProps> = () => {
 };
 
 const Container = styled.div`
-  padding-top: 10rem;
+  padding: 5rem;
   padding-bottom: 2rem;
 `;
 const FooterContent = styled.h3`

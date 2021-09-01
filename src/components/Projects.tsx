@@ -14,11 +14,12 @@ import WTProject from "../assets/images/projectTile/WTProject.jpeg";
 
 interface ProjectsProps {
   id: string;
+  classList: string;
 }
 
-export const Projects: React.FC<ProjectsProps> = ({ id }) => {
+export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
   return (
-    <Container id={id}>
+    <Container id={id} className={classList}>
       <Header>
         <Title>Projects</Title>
         {/* <Line></Line> */}
@@ -145,7 +146,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id }) => {
 const Container = styled.div`
   padding: 5rem 0;
   @media (max-width: 1250px) {
-    padding: 0;
+    padding: 3rem 0 0 0;
   }
 `;
 const Header = styled.div`

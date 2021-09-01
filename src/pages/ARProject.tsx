@@ -11,8 +11,6 @@ import { HighlightSpan } from "../components/Utils/HighlightSpan";
 import { PLink } from "../components/Utils/PLink";
 import styled from "styled-components";
 
-import { VscGithub } from "react-icons/vsc";
-
 interface ARProjectProps {}
 
 export const ARProject: React.FC<ARProjectProps> = () => (

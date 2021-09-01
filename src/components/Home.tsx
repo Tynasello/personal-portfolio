@@ -63,6 +63,9 @@ const ImageContainer = styled.div``;
 
 const ProfileImage = styled.img`
   width: 35vw;
-  min-width: 350px;
+  min-width: 300px;
   padding-top: 2rem;
+  @media (max-width: 1250px) {
+    width: 100%;
+  }
 `;

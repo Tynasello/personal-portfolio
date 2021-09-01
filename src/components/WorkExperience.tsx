@@ -4,17 +4,23 @@ import { WorkExperienceInfo } from "./Utils/WorkExperienceInfo";
 
 interface WorkExperienceProps {
   id: string;
+  classList: string;
 }
 
-export const WorkExperience: React.FC<WorkExperienceProps> = ({ id }) => {
+export const WorkExperience: React.FC<WorkExperienceProps> = ({
+  id,
+  classList,
+}) => {
   const [selectorId, setSelectorId] = useState("zfgroup");
   const [position, setPosition] = useState("Engineering Shadow");
   const [location, setLocation] = useState("ZF-Group");
   const [dates, setDates] = useState("Summer 2021");
   const [description, setDescription] = useState([
-    "safety guidelines and procedures are followed during",
-    "I ensure that proper safety guidelines and procedures are followed during the preparation and storage of food items.",
-    "Responsible for efficiently filling customer orders and guaranteeing customer satisfaction.",
+    "Shadowed a team of engineers at an automobile assembly plant.",
+    "Worked on distance sensor installation which fixed an existing issue of incorrect operator installation of a part.",
+    "Observed engineers solving real time module issues on the plant floor.",
+    "Worked on DRM (Disaster Recovery Mode) project which supplied lines with backup systems in case of tool/module failures.",
+    "My roles included data entry, cross referencing parts, and printing labeled instructions.",
   ]);
 
   useEffect(() => {
@@ -26,21 +32,23 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({ id }) => {
       setDates("July 2018 - September 2021");
       setDescription([
         "Responsible for efficiently filling customer orders and guaranteeing customer satisfaction.",
-        "I ensure that proper safety guidelines and procedures are followed during the preparation and storage of food items.",
-        "I actively work with a team of co-workers to ensure group goals are met.",
+        "Ensured that proper safety guidelines and procedures were followed during the preparation and storage of food items.",
+        "Actively worked with a team of co-workers to ensure group goals were met.",
       ]);
       document.getElementById("chc-selector")!.classList.remove("active");
       document.getElementById("zfgroup-selector")!.classList.remove("active");
     } else if (selectorId === "zfgroup") {
       active = document.getElementById("zfgroup-selector");
 
-      setPosition("Engineer Shadow");
+      setPosition("Engineering Shadow");
       setLocation("ZF Group");
       setDates("Summer 2021");
       setDescription([
-        "safety guidelines and procedures are followed during",
-        "I ensure that proper safety guidelines and procedures are followed during the preparation and storage of food items.",
-        "Responsible for efficiently filling customer orders and guaranteeing customer satisfaction.",
+        "Shadowed a team of engineers at an automobile assembly plant.",
+        "Worked on distance sensor installation which fixed an existing issue of incorrect operator installation of a part.",
+        "Observed engineers solving real time module issues on the plant floor.",
+        "Worked on DRM (Disaster Recovery Mode) project which supplied lines with backup systems in case of tool/module failures.",
+        "My roles included data entry, cross referencing parts, and printing labeled instructions.",
       ]);
       document
         .getElementById("timhortons-selector")!
@@ -49,15 +57,11 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({ id }) => {
     } else if (selectorId === "chc") {
       active = document.getElementById("chc-selector");
 
-      setPosition(
-        "Intro to Building Automation Systems and Heat Management Systems"
-      );
+      setPosition("Introduction to BAS and HMS");
       setLocation("Windsor Essex Community Housing Corporation");
       setDates("Summer 2021");
       setDescription([
-        "I ensure that proper safety guidelines and procedures are followed during the preparation and storage of food items.",
-        "safety guidelines and procedures are followed during",
-        "Responsible for efficiently filling customer orders and guaranteeing customer satisfaction.",
+        "Introduced to various building automation system and heat management system drawings/blueprints for a local apartment complex.",
       ]);
       document
         .getElementById("timhortons-selector")!
@@ -70,7 +74,7 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({ id }) => {
   }, [selectorId]);
 
   return (
-    <Container id={id}>
+    <Container id={id} className={classList}>
       <Header>
         <Title>Work Experience</Title>
         <Line></Line>
@@ -86,14 +90,7 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({ id }) => {
             >
               ZF Group
             </LocationItem>
-            <LocationItem
-              id="chc-selector"
-              onClick={() => {
-                setSelectorId("chc");
-              }}
-            >
-              Windsor Essex CHC
-            </LocationItem>
+
             <LocationItem
               id="timhortons-selector"
               onClick={() => {
@@ -101,6 +98,14 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({ id }) => {
               }}
             >
               Tim Hortons
+            </LocationItem>
+            <LocationItem
+              id="chc-selector"
+              onClick={() => {
+                setSelectorId("chc");
+              }}
+            >
+              Windsor Essex CHC
             </LocationItem>
           </LocationsList>
         </WorkLocationsSection>
@@ -117,6 +122,7 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({ id }) => {
 };
 const Container = styled.div`
   padding: 5rem;
+  padding-bottom: 20rem;
   @media (max-width: 1250px) {
     padding: 0;
   }
@@ -173,7 +179,7 @@ const LocationItem = styled.p`
   @media (max-width: 1300px) {
     border-left: none;
     padding: 0.7rem 1rem;
-    border-bottom: 1px solid ${({ theme }) => theme.colors.primary};
+    /* border-bottom: 1px solid ${({ theme }) => theme.colors.primary}; */
     margin-bottom: -3px;
     margin-left: 0;
   }

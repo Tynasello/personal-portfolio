@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SyntheticEvent, useEffect } from "react";
 import styled from "styled-components";
 
 import { About } from "../components/About";
@@ -12,15 +12,35 @@ import { WorkExperience } from "../components/WorkExperience";
 interface LandingPageProps {}
 
 export const LandingPage: React.FC<LandingPageProps> = () => {
+  const options = {
+    rootMargin: "100px",
+    threshold: 0.0,
+  };
+  const showItem = (fadeIns: any) => {
+    fadeIns.forEach((fadeIn: any) => {
+      if (fadeIn.isIntersecting) {
+        fadeIn.target.classList.add("fadeInActive");
+      }
+    });
+  };
+  const observer = new IntersectionObserver(showItem, options);
+
+  useEffect(() => {
+    const fadeInComponents = document.querySelectorAll(".fadein");
+    fadeInComponents.forEach((fadeIn) => {
+      observer.observe(fadeIn);
+    });
+  });
+
   return (
     <Container>
       <Nav />
       <ContactLinks></ContactLinks>
       <ContentContainer>
         <Home></Home>
-        <About id="about"></About>
-        <Projects id="projects"></Projects>
-        <WorkExperience id="work"></WorkExperience>
+        <About id="about" classList="fadein"></About>
+        <Projects id="projects" classList=""></Projects>
+        <WorkExperience id="work" classList="fadein"></WorkExperience>
       </ContentContainer>
       <Footer></Footer>
     </Container>
