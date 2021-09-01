@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import profileImg from "../assets/images/sebastian.png";
+import profileImg from "../assets/images/profile.png";
 interface HomeProps {}
 
 export const Home: React.FC<HomeProps> = () => {
