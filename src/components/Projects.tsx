@@ -32,7 +32,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
                       "
           img={CVProject}
           tags={["JavaScript", "React"]}
-          color="#607e78E6"
+          color="#4A5366e6"
           url="https://tynasello.github.io/cv-builder/"
           githubLink="https://github.com/Tynasello/cv-builder"
         ></ProjectTile>
@@ -44,7 +44,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
                       "
           img={APProject}
           tags={["NodeJS", "Express", "API", "MongoDB", "JWT", "Heroku"]}
-          color="#ed524cE6"
+          color="#A2A498e6"
           url="https://github.com/Tynasello/blog-api"
           githubLink="https://github.com/Tynasello/blog-api"
         ></ProjectTile>
@@ -56,7 +56,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
                       "
           img={CPProject}
           tags={["CP", "Python"]}
-          color="#f7ba42e6"
+          color="#7C9A95e6"
           url="https://github.com/Tynasello/cp-practice"
           githubLink="https://github.com/Tynasello/cp-practice"
         ></ProjectTile>
@@ -68,7 +68,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
                       "
           img={BFProject}
           tags={["TypeScript", "React"]}
-          color="#12b0bdE6"
+          color="#BDABD4e6"
           url="https://tynasello.github.io/blog-frontend/"
           githubLink="https://github.com/Tynasello/blog-frontend"
         ></ProjectTile>
@@ -80,7 +80,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
                       "
           img={TDProject}
           tags={["JavaScript", "HTML/CSS", "Webpack"]}
-          color="#523a59e6"
+          color="#4B7088e6"
           url="https://tynasello.github.io/to-do-app/"
           githubLink="https://github.com/Tynasello/to-do-app"
         ></ProjectTile>
@@ -95,7 +95,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
                       "
           img={ACProject}
           tags={["C++", "Arduino"]}
-          color="#3954a0E6"
+          color="#0695B2e6"
           redirect="/ARProject"
           githubLink="https://github.com/Tynasello/arduino-robot"
         ></ProjectTile>
@@ -108,7 +108,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
                         and a TCS230 color sensor."
           img={CSProject}
           tags={["C++", "Arduino"]}
-          color="#e44c64e6"
+          color="#906C73e6"
           redirect="/CSProject"
           githubLink="https://github.com/Tynasello/color-sorter"
         ></ProjectTile>
@@ -121,7 +121,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
                       "
           img={FBProject}
           tags={["Python", "Pygame"]}
-          color="#30b783E6"
+          color="#4E9DA1e6"
           redirect="/FBProject"
           githubLink="https://github.com/Tynasello/flappy-bird"
         ></ProjectTile>
@@ -135,7 +135,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
                       "
           img={WTProject}
           tags={["Python", "GUI", "PyQt"]}
-          color="#F07411e6"
+          color="#924C77e6"
           redirect="/WTProject"
           githubLink="https://github.com/Tynasello/word-translator"
         ></ProjectTile>

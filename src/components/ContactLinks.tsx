@@ -30,6 +30,9 @@ const NavContainer = styled.div`
   position: fixed;
   bottom: 0;
   z-index: 19;
+  @media (max-width: 470px) {
+    display: none;
+  }
 `;
 const NavUl = styled.ul`
   width: 8rem;
@@ -42,10 +45,6 @@ const NavUl = styled.ul`
     width: 4rem;
     margin-bottom: 1rem;
   }
-  @media (max-width: 415px) {
-    width: 2rem;
-    margin-bottom: 0;
-  }
 `;
 const NavLi = styled.a`
   font-size: 2rem;
@@ -57,10 +56,7 @@ const NavLi = styled.a`
   @media (max-width: 870px) {
     font-size: 1.5rem;
   }
-  @media (max-width: 415px) {
-    font-size: 1rem;
-    padding: 0.5rem 0;
-  }
+
   &:hover {
     transform: translateY(-4px);
   }

@@ -4,6 +4,12 @@ import styled from "styled-components";
 import logo from "../assets/images/logo.png";
 import modalWave from "../assets/images/modalwave.svg";
 
+import { FiGithub } from "react-icons/fi";
+import { BiMailSend } from "react-icons/bi";
+import { RiFilePaper2Line } from "react-icons/ri";
+
+import resume from "../assets/Resume.pdf";
+
 import { HashLink } from "react-router-hash-link";
 
 interface NavProps {
@@ -66,6 +72,17 @@ export const Nav: React.FC<NavProps> = ({ projectNav }) => {
             <NavLi onClick={(e) => modalLinkClick(e)} to="#work">
               Work Experience
             </NavLi>
+            <ContactDiv>
+              <ContactLi href="https://github.com/tynasello" target="_blank">
+                <FiGithub />
+              </ContactLi>
+              <ContactLi href="mailto:tynasello@gmail.com" target="_blank">
+                <BiMailSend />
+              </ContactLi>
+              <ContactLi href={resume} target="_blank">
+                <RiFilePaper2Line />
+              </ContactLi>
+            </ContactDiv>
             <ModalImg src={modalWave} alt="logo"></ModalImg>
           </NavUl>
         </div>
@@ -126,5 +143,24 @@ const NavLi = styled(HashLink)`
 
   &:hover {
     transform: scale(1.1);
+  }
+`;
+const ContactDiv = styled.div`
+  z-index: 12;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  display: none;
+
+  @media (max-width: 470px) {
+    display: flex;
+  }
+`;
+const ContactLi = styled.a`
+  padding: 0 1rem;
+  font-size: 2rem;
+  transition: all 0.5s;
+  &:hover {
+    transform: translateY(-4px);
   }
 `;

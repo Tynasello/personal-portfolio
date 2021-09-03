@@ -12,15 +12,13 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
   classList,
 }) => {
   const [selectorId, setSelectorId] = useState("zfgroup");
-  const [position, setPosition] = useState("Engineering Shadow");
+  const [position, setPosition] = useState("Engineering Assistant");
   const [location, setLocation] = useState("ZF-Group");
   const [dates, setDates] = useState("Summer 2021");
   const [description, setDescription] = useState([
     "Shadowed a team of engineers at an automobile assembly plant.",
     "Worked on distance sensor installation which fixed an existing issue of incorrect operator installation of a part.",
-    "Observed engineers solving real time module issues on the plant floor.",
-    "Worked on DRM (Disaster Recovery Mode) project which supplied lines with backup systems in case of tool/module failures.",
-    "My roles included data entry, cross referencing parts, and printing labeled instructions.",
+    "Worked on DRM (Disaster Recovery Mode) project which supplied lines with backup systems in case of tool/module failures. My roles included data entry, cross referencing parts, and printing labeled instructions.",
   ]);
 
   useEffect(() => {
@@ -40,15 +38,13 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
     } else if (selectorId === "zfgroup") {
       active = document.getElementById("zfgroup-selector");
 
-      setPosition("Engineering Shadow");
+      setPosition("Engineering Assistant");
       setLocation("ZF Group");
       setDates("Summer 2021");
       setDescription([
         "Shadowed a team of engineers at an automobile assembly plant.",
         "Worked on distance sensor installation which fixed an existing issue of incorrect operator installation of a part.",
-        "Observed engineers solving real time module issues on the plant floor.",
-        "Worked on DRM (Disaster Recovery Mode) project which supplied lines with backup systems in case of tool/module failures.",
-        "My roles included data entry, cross referencing parts, and printing labeled instructions.",
+        "Worked on DRM (Disaster Recovery Mode) project which supplied lines with backup systems in case of tool/module failures. My roles included data entry, cross referencing parts, and printing labeled instructions.",
       ]);
       document
         .getElementById("timhortons-selector")!
@@ -61,7 +57,8 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
       setLocation("Windsor Essex Community Housing Corporation");
       setDates("Summer 2021");
       setDescription([
-        "Introduced to various building automation system and heat management system drawings/blueprints for a local apartment complex.",
+        "Introduced to and familiarized myself with various building automation system and heat management system drawings/blueprints for a local apartment complex.",
+        "Engaged in a series of meetings with the project manager discussing oppurtunities to participate in future projects.",
       ]);
       document
         .getElementById("timhortons-selector")!
