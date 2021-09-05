@@ -159,10 +159,9 @@ const ProjectsContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  row-gap: 1.8rem;
-  column-gap: 1.8rem;
 
   > * {
     width: 330px;
+    height: 330px;
   }
 `;

@@ -83,6 +83,7 @@ export const ProjectTile: React.FC<ProjectTileProps> = ({
 };
 const Container = styled(Link)`
   position: relative;
+  margin: 0.8rem;
 `;
 const ProjectImg = styled.img`
   z-index: -1;
@@ -96,8 +97,10 @@ const ProjectContainer = styled.div`
   padding: 1rem;
   border-radius: 5px;
   aspect-ratio: 1;
+  height: 298px;
   overflow: hidden;
   transition: all 0.5s;
+
   &:hover {
     & > * {
       display: none;
