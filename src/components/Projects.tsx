@@ -40,7 +40,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
         <ProjectTile
           title="Blog API"
           description="
-                      A Node/Express REST API for creating personal blogs.
+                      A Node Express REST API for creating personal blogs.
                       "
           img={APProject}
           tags={["NodeJS", "Express", "API", "MongoDB", "JWT", "Heroku"]}
@@ -55,7 +55,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
                       Github repository containing solutions to practice programming problems I have solved or am currently working on.
                       "
           img={CPProject}
-          tags={["CP", "Python"]}
+          tags={["Python"]}
           color="#7C9A95e6"
           url="https://github.com/Tynasello/cp-practice"
           githubLink="https://github.com/Tynasello/cp-practice"
@@ -76,7 +76,7 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
         <ProjectTile
           title="To-do App"
           description="
-                      A To-do list app where users can add custom tasks with their own descriptions, due dates, and priority levels.
+                      A to-do list app where users can add custom tasks with their own descriptions, due dates, and priority levels.
                       "
           img={TDProject}
           tags={["JavaScript", "HTML/CSS", "Webpack"]}

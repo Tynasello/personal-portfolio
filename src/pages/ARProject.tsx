@@ -24,7 +24,7 @@ export const ARProject: React.FC<ARProjectProps> = () => (
       </HighlightSpan>
       Uno microcontroller. The robot performs certain maneuvers based on input
       from a Bluetooth terminal application. The robot has an optional
-      "autonomous mode" which when activated, will cause the robot to drive
+      autonomous mode which when activated, will cause the robot to drive
       forward, redirecting its route only when the ultrasonic sensor detects an
       object within 10 cm.
     </ProjectP>
@@ -33,11 +33,11 @@ export const ARProject: React.FC<ARProjectProps> = () => (
     <ProjectP>
       The Arduino is responsible for commanding all parts of the robot. The
       robots <HighlightSpan>HC-SR04 ultrasonic sensor</HighlightSpan> and{" "}
-      <HighlightSpan>HC-08 Bluetooth module</HighlightSpan> are connected to the
+      <HighlightSpan>HC-08 bluetooth module</HighlightSpan> are connected to the
       Arduino's analog and digital pins respectively. The Arduino is powered via
       a USB connected powerbank. The{" "}
-      <HighlightSpan>L293D Motor Controller Shield </HighlightSpan> plugs into
-      the Arudino from the top and operates the motors on the chassis.
+      <HighlightSpan>L293D motor controller shield </HighlightSpan> plugs into
+      the top of the Arudino and operates the motors on the chassis.
       <br />
       <br />
       All actions performed by the robot are due to input from a bluetooth
@@ -54,11 +54,11 @@ export const ARProject: React.FC<ARProjectProps> = () => (
         <PLink href="https://www.arduino.cc/">Arduino IDE</PLink>
       </HighlightSpan>{" "}
       using the programming language C++. The AFMotor.h library provided
-      simultaneous speed and directional control for the motors alongside the
-      L293D shield. The NewPing.h library delivered ultrasonic sensor
-      functionality. Lastly, the SoftwareSerial.h library was included to allow
-      serial communication between a bluetooth terminal and the Arduino via the
-      HC-08. A link to my code for this project can be found{" "}
+      simultaneous speed and directional motor control The NewPing.h library
+      delivered ultrasonic sensor functionality. Lastly, the SoftwareSerial.h
+      library was leveraged to allow serial communication between a bluetooth
+      terminal and the Arduino via the HC-08. A link to my code for this project
+      can be found{" "}
       <HighlightSpan>
         <PLink href="https://github.com/Tynasello/arduino-robot">here</PLink>
       </HighlightSpan>

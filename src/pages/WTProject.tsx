@@ -18,17 +18,23 @@ interface WTProjectProps {}
 export const WTProject: React.FC<WTProjectProps> = () => (
   <Project headerImg={WTProject1} title="Word Translation GUI">
     <ProjectP>
+      A Graphical User Interface displaying the translation of user inputs in
+      selected languages.
+      <br />
+      <br />
       The code for this project was written in{" "}
       <HighlightSpan>Python</HighlightSpan> leveraging the{" "}
-      <HighlightSpan>pyqt</HighlightSpan> and{" "}
-      <HighlightSpan>googletrans</HighlightSpan> libraries. The pyqt library is
-      a python binding for a C++ toolkit name Qt which includes various
+      <HighlightSpan>PyQt5</HighlightSpan> and{" "}
+      <HighlightSpan>googletrans</HighlightSpan> libraries. The PyQt library is
+      a python binding for a C++ toolkit named Qt which includes various
       libraries and development tools for the purpose of creating GUIs. The
-      googletrans library allows word translation functionality. The GUI prompts
-      a user to input a sentence. Once completed, a list of 11 languages is
-      given. The user's entry is then translated into the chosen language and
-      displayed. The user can then select for a different translation or quit
-      the GUI. The tutorials on{" "}
+      googletrans library assisted in word translations.
+      <br />
+      <br />
+      The GUI prompts a user to input a sentence. Once completed, a list of 11
+      languages is given. The user's entry is then translated into the chosen
+      language and displayed. The user can then select for a different
+      translation or quit the GUI. The tutorials on{" "}
       <HighlightSpan>
         <PLink href="https://realpython.com/python-pyqt-gui-calculator/">
           realpython.com{" "}
@@ -37,10 +43,10 @@ export const WTProject: React.FC<WTProjectProps> = () => (
       and{" "}
       <HighlightSpan>
         <PLink href="https://www.pythonguis.com/pyqt-tutorial/">
-          learnpyqt.com
+          learnpyqt.com{" "}
         </PLink>
       </HighlightSpan>
-      assisted me in the effective use of pyqt and in the creation of .dmg and
+      assisted me in the effective use of PyQt and in the creation of .dmg and
       .exe files for users. A link to my code for this project can be found{" "}
       <HighlightSpan>
         <PLink href="https://github.com/Tynasello/word-translator">here</PLink>

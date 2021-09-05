@@ -12,14 +12,10 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
   classList,
 }) => {
   const [selectorId, setSelectorId] = useState("zfgroup");
-  const [position, setPosition] = useState("Engineering Assistant");
-  const [location, setLocation] = useState("ZF-Group");
-  const [dates, setDates] = useState("Summer 2021");
-  const [description, setDescription] = useState([
-    "Shadowed a team of engineers at an automobile assembly plant.",
-    "Worked on distance sensor installation which fixed an existing issue of incorrect operator installation of a part.",
-    "Worked on DRM (Disaster Recovery Mode) project which supplied lines with backup systems in case of tool/module failures. My roles included data entry, cross referencing parts, and printing labeled instructions.",
-  ]);
+  const [position, setPosition] = useState("");
+  const [location, setLocation] = useState("");
+  const [dates, setDates] = useState("");
+  const [description, setDescription] = useState([""]);
 
   useEffect(() => {
     let active: HTMLElement | null = document.getElementById("zf-selector");
@@ -30,8 +26,8 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
       setDates("July 2018 - September 2021");
       setDescription([
         "Responsible for efficiently filling customer orders and guaranteeing customer satisfaction.",
-        "Ensured that proper safety guidelines and procedures were followed during the preparation and storage of food items.",
         "Actively worked with a team of co-workers to ensure group goals were met.",
+        "Ensured that proper safety guidelines and procedures were followed during the preparation and storage of food items.",
       ]);
       document.getElementById("chc-selector")!.classList.remove("active");
       document.getElementById("zfgroup-selector")!.classList.remove("active");
@@ -44,7 +40,7 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
       setDescription([
         "Shadowed a team of engineers at an automobile assembly plant.",
         "Worked on distance sensor installation which fixed an existing issue of incorrect operator installation of a part.",
-        "Worked on DRM (Disaster Recovery Mode) project which supplied lines with backup systems in case of tool/module failures. My roles included data entry, cross referencing parts, and printing labeled instructions.",
+        "Involved in DRM (Disaster Recovery Mode) project which supplied lines with backup systems in case of tool/module failures. My roles included data entry, cross referencing parts, and designing labeled instructions.",
       ]);
       document
         .getElementById("timhortons-selector")!
@@ -102,7 +98,7 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
                 setSelectorId("chc");
               }}
             >
-              Windsor Essex CHC
+              Windsor CHC
             </LocationItem>
           </LocationsList>
         </WorkLocationsSection>

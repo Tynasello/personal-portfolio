@@ -26,9 +26,10 @@ export const About: React.FC<AboutProps> = ({ id, classList }) => {
             seeking Winter 2022 internships.
             <br />
             <br />
-            In my free time I enjoy working on projects, exercising, and playing
-            sports. I have a passion for solving complex problems and working
-            with computers. Feel free to contact me at any time via{" "}
+            In my free time I enjoy working on projects, solving competitive
+            programming problems, exercising, and playing sports. I have a
+            passion for solving complex issues and deriving solutions. Feel free
+            to contact me at any time via{" "}
             <HighlightSpan>
               <PLink href="mailto:tynasello@gmail.com" target="_blank">
                 email.{}
@@ -52,19 +53,20 @@ export const About: React.FC<AboutProps> = ({ id, classList }) => {
           <StackHeader>Technologies and Tools</StackHeader>
           <TagsContainer>
             <Tag>Python</Tag>
-            <Tag>JavaScript</Tag>
             <Tag>TypeScript</Tag>
+            <Tag>JavaScript</Tag>
+            <Tag>React</Tag>
             <Tag>NodeJS</Tag>
             <Tag>Express</Tag>
-            <Tag>React</Tag>
             <Tag>HTML</Tag>
             <Tag>CSS</Tag>
             <Tag>C++</Tag>
             <Tag>Java</Tag>
             <Tag>MongoDB</Tag>
             <Tag>Git</Tag>
-            <Tag>Webpack</Tag>
             <Tag>Heroku</Tag>
+            <Tag>Netlify</Tag>
+            <Tag>Figma</Tag>
           </TagsContainer>
         </StackSection>
       </AboutContainer>

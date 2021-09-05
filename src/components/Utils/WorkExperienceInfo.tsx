@@ -25,14 +25,15 @@ export const WorkExperienceInfo: React.FC<WorkExperienceInfoProps> = ({
   return (
     <InfoContainer id={selectorId}>
       <Header>
-        {position} at{" "}
+        {position}
         <HighlightSpan
           style={{
             paddingLeft: ".1rem",
             color: "#7f5bf0",
           }}
         >
-          {location}
+          {" "}
+          @ {location}
         </HighlightSpan>
       </Header>
       <Dates>{dates}</Dates>

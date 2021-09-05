@@ -14,9 +14,14 @@ interface FBProjectProps {}
 export const FBProject: React.FC<FBProjectProps> = () => (
   <Project headerImg={FBProject1} title="Flappy Bird (Recreation)">
     <ProjectP>
-      The code was written in <HighlightSpan>Python</HighlightSpan> 3.6 with
-      <HighlightSpan> Pygame</HighlightSpan> 1.9.6. Pygame is a set of modules
-      created for the purpose of making video games and multimedia programs.
+      My Recreation of the popular game Flappy Bird.
+      <br />
+      <br />
+      The code for this project was written in{" "}
+      <HighlightSpan>Python</HighlightSpan> 3.6 leveraging the
+      <HighlightSpan> Pygame</HighlightSpan> 1.9.6 library. Pygame is a set of
+      modules created for the purpose of making video games and multimedia
+      programs.
       <br />
       <br />
       The tutorials on{" "}

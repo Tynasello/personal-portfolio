@@ -15,7 +15,7 @@ export const CSProject: React.FC<CSProjectProps> = () => (
   <Project headerImg={CSProject1} title="Arduino Color Sorter">
     <ProjectP>
       The purpose of this project was to create a system that would sort
-      Skittles based on color. Two micro servo motors were used in the project;
+      Skittles based on color. Two micro servo motors were used in this project;
       one to pick up the Skittles, and one to drop them into designated cups. A
       <HighlightSpan> TCS230 color sensor</HighlightSpan> was used to
       differentiate between red, green, and yellow skittles.
@@ -23,8 +23,8 @@ export const CSProject: React.FC<CSProjectProps> = () => (
 
     <ProjectSubtitle>Color Sensor Functionality</ProjectSubtitle>
     <ProjectP>
-      The color sensor contains 64 evenly distributed red, green, blue and clear
-      photodiodes which are responsible for color readings. The TCS230's
+      The color sensor contains 64 evenly distributed red, green, blue, and
+      clear photodiodes which are responsible for color readings. The TCS230's
       readings are converted from current to frequency, allowing the Arduino to
       discern skittle color. A website that assisted my understanding of the
       TCS230 can be found{" "}
@@ -43,13 +43,11 @@ export const CSProject: React.FC<CSProjectProps> = () => (
       <HighlightSpan>
         <PLink href="https://www.arduino.cc/">Arduino IDE</PLink>
       </HighlightSpan>{" "}
-      using the programming language C++. The Servo.h library allowed the
-      control of the two micro servos. The micro servos were controlled using
-      the write() function that would turn the servos based on an inputted
-      degree amount. The TCS230 color sensor was utilized by using the pulseIn()
-      function that would read the output frequency detected by the sensor.
-      These values were then inserted into three different 'if statements' (one
-      for red, green and yellow) that would determine Skittle color based on
+      using the programming language C++. The Servo.h library promoted micro
+      servo control. Both micro servos could be rotated an inputted degree
+      ammount with the use of the libraries write() function. The TCS230 color
+      sensor made use of the pulseIn() function which would read the sensors
+      detected output color frequency. These readings were compared against
       pre-determined frequency numbers that corresponded to each color. A link
       to my code for this project can be found{" "}
       <HighlightSpan>
