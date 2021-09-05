@@ -20,10 +20,9 @@ export const About: React.FC<AboutProps> = ({ id, classList }) => {
       <AboutContainer>
         <ContentSection>
           <ContentP>
-            In the Fall of 2021, I will be attending the{" "}
-            <HighlightSpan>University of Waterloo {}</HighlightSpan>
-            to pursue a degree in mechatronics engineering. I am currently
-            seeking Winter 2022 internships.
+            I am a <HighlightSpan>University of Waterloo </HighlightSpan>
+            student pursuing a degree in mechatronics engineering. I am
+            currently seeking Winter 2022 internships.
             <br />
             <br />
             In my free time I enjoy working on projects, solving competitive
