@@ -163,5 +163,13 @@ const ProjectsContainer = styled.div`
   > * {
     width: 330px;
     height: 330px;
+    @media (max-width: 450px) {
+      width: 250px;
+      height: 250px;
+    }
+    @media (max-width: 370px) {
+      width: 200px;
+      height: 200px;
+    }
   }
 `;

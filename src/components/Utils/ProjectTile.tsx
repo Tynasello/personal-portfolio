@@ -96,11 +96,9 @@ const ProjectImg = styled.img`
 const ProjectContainer = styled.div`
   padding: 1rem;
   border-radius: 5px;
-  aspect-ratio: 1;
-  height: 298px;
   overflow: hidden;
   transition: all 0.5s;
-
+  height: 298px;
   &:hover {
     & > * {
       display: none;
@@ -108,6 +106,11 @@ const ProjectContainer = styled.div`
   }
   @media (max-width: 450px) {
     padding: 0.8rem;
+    height: 226px;
+  }
+  @media (max-width: 370px) {
+    padding: 0.8rem;
+    height: 175px;
   }
 `;
 const Header = styled.h3`
@@ -151,6 +154,7 @@ const GithubLink = styled.a`
   margin: 1rem;
   font-size: 1.5em;
   transition: all 0.5s;
+
   &:hover {
     transform: scale(1.2);
   }
