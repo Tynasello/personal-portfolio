@@ -15,6 +15,7 @@ export const Project: React.FC<ProjectProps> = ({
   children,
   headerImg,
 }) => {
+  // Need to manually scroll to top of page on mount - an existing react issue
   useState(() => {
     window.scrollTo(0, 0);
   });
@@ -33,15 +34,14 @@ export const Project: React.FC<ProjectProps> = ({
 };
 const Container = styled.div``;
 const ProjectContainer = styled.div`
-  margin: 6rem auto;
   width: 40vw;
+  margin: 6rem auto;
   @media (max-width: 800px) {
     width: 60vw;
   }
 `;
 const HeaderImg = styled.img`
   width: 100%;
-  transition: all 0.5s;
 `;
 
 const Header = styled.h3`

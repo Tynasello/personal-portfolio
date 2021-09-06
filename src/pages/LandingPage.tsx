@@ -12,6 +12,9 @@ import { WorkExperience } from "../components/WorkExperience";
 interface LandingPageProps {}
 
 export const LandingPage: React.FC<LandingPageProps> = () => {
+  /*--------------------------------------------------------------*/
+  // Fade in on scroll of components
+
   const options = {
     rootMargin: "100px",
     threshold: 0.0,
@@ -31,6 +34,7 @@ export const LandingPage: React.FC<LandingPageProps> = () => {
       observer.observe(fadeIn);
     });
   });
+  /*--------------------------------------------------------------*/
 
   return (
     <Container>

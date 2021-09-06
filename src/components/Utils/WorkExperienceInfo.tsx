@@ -37,6 +37,7 @@ export const WorkExperienceInfo: React.FC<WorkExperienceInfoProps> = ({
         </HighlightSpan>
       </Header>
       <Dates>{dates}</Dates>
+      {/* Map each point in description array to its own point */}
       <PointsSection>
         {description.map((point: string) => {
           return (

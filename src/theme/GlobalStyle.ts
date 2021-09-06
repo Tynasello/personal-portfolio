@@ -5,7 +5,10 @@ import { createGlobalStyle } from "styled-components";
 /*--------------------------------------------------------------*/
 
 const GlobalStyle = createGlobalStyle`
+
+    /*--------------------------------------------------------------*/
     /* Reset styles for all structural tags */
+    
     a,  body, button, canvas,  div, form,
     h1, h2, h3, h4, h5, h6, head, header,  
     hr, html, i, iframe, img, input,  
@@ -23,9 +26,11 @@ const GlobalStyle = createGlobalStyle`
         z-index: 1;
     }
 
-    Miscellaneous resets
+    /*--------------------------------------------------------------*/
+    /* Miscellaneous resets */
+
     body {
-        line-height: 1;
+        line-height: 1.25;
     }
 
     ul {
@@ -45,6 +50,11 @@ const GlobalStyle = createGlobalStyle`
         line-height: 1.15; 
         margin: 0; 
     }
+
+    /*--------------------------------------------------------------*/
+    /* Global Styling */
+
+
     html{
         scroll-behavior: smooth;
     }
@@ -59,10 +69,13 @@ const GlobalStyle = createGlobalStyle`
         font-size: clamp(50px, 3.5vw, 100px);
     }
         
-    }
+    
     p{
         font-size: 1.6rem;
     }
+    /*--------------------------------------------------------------*/
+    /* active work experience section */
+
     .active {
         border-left: 3px solid #7f5bf0;
         margin-left:-3px;
@@ -75,6 +88,9 @@ const GlobalStyle = createGlobalStyle`
             margin-bottom:-3px;
         }
     }
+    /*--------------------------------------------------------------*/
+    /* Styling for landing page components to fade up on scroll */
+
     .fadein{
         transform:translateY(30%);
     }
@@ -82,7 +98,9 @@ const GlobalStyle = createGlobalStyle`
         transform:translateY(0%);
         transition:1s ease-out;
     }
-    /* Hamburger nav design from Tyler Potts*/
+    /*--------------------------------------------------------------*/
+    /* Hamburger menu design from Tyler Potts */
+
     .hamburger{
         display:block;
         position:absolute;
@@ -128,7 +146,10 @@ const GlobalStyle = createGlobalStyle`
     .hamburger.is-active:hover span{
         background-color: #7f5bf0;
     }  
-   
+
+    /*--------------------------------------------------------------*/
+    /* Modal for hamburger menu */
+
     .modal{
         display: none;
     }
@@ -160,6 +181,7 @@ const GlobalStyle = createGlobalStyle`
             }
         }
     }
+
 `;
 /*--------------------------------------------------------------*/
 export default GlobalStyle;

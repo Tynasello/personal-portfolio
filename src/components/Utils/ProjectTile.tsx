@@ -27,19 +27,21 @@ export const ProjectTile: React.FC<ProjectTileProps> = ({
   githubLink,
 }) => {
   const [bgColor, setBgColor] = useState(color);
-  useEffect(() => {
-    return;
-  }, [bgColor]);
+
+  /*--------------------------------------------------------------*/
+  // When project tile is clicked open its url in a new window
   const handleProjectClick = (e: SyntheticEvent) => {
     if (url) {
       window.open(url, "_blank");
     }
   };
+  /*--------------------------------------------------------------*/
+  // When the github link is clicked open it in a new windows
+  // event prevent default is key to stop bubbling (prevents project tile link from opening)
   const handleGithubLink = (e: SyntheticEvent) => {
     e.preventDefault();
 
     window.open(githubLink, "_blank");
-    e.stopPropagation();
   };
   return (
     <Container
@@ -52,9 +54,6 @@ export const ProjectTile: React.FC<ProjectTileProps> = ({
 
       <ProjectContainer
         style={{ backgroundColor: bgColor }}
-        onClick={(e) => {
-          return <Redirect to="/somewhere/else" />;
-        }}
         onMouseOverCapture={() => {
           setBgColor("transparent");
         }}
@@ -86,19 +85,20 @@ const Container = styled(Link)`
   margin: 0.8rem;
 `;
 const ProjectImg = styled.img`
-  z-index: -1;
-  border-radius: 5px;
   position: absolute;
   width: 100%;
   top: 0;
+  z-index: -1;
+  border-radius: 5px;
 `;
 
 const ProjectContainer = styled.div`
+  height: 298px;
+  overflow: hidden;
   padding: 1rem;
   border-radius: 5px;
-  overflow: hidden;
   transition: all 0.5s;
-  height: 298px;
+
   &:hover {
     & > * {
       display: none;

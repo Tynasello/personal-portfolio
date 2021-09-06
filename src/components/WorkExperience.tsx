@@ -17,8 +17,14 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
   const [dates, setDates] = useState("");
   const [description, setDescription] = useState([""]);
 
+  /*--------------------------------------------------------------*/
+  // Run useEffect on mount, unmount and when selectorId is changed
   useEffect(() => {
+    // Set a fallback active location if none is chosen -> should be first location
     let active: HTMLElement | null = document.getElementById("zf-selector");
+
+    /*--------------------------------------------------------------*/
+    // Set all work experience info paramters to corresponding selectorId values
     if (selectorId === "timhortons") {
       active = document.getElementById("timhortons-selector");
       setPosition("Service Employee");
@@ -31,6 +37,8 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
       ]);
       document.getElementById("chc-selector")!.classList.remove("active");
       document.getElementById("zfgroup-selector")!.classList.remove("active");
+
+      /*--------------------------------------------------------------*/
     } else if (selectorId === "zfgroup") {
       active = document.getElementById("zfgroup-selector");
 
@@ -40,16 +48,18 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
       setDescription([
         "Shadowed a team of engineers at an automobile assembly plant.",
         "Worked on distance sensor installation which fixed an existing issue of incorrect operator installation of a part.",
-        "Involved in DRM (Disaster Recovery Mode) project which supplied lines with backup systems in case of tool/module failures. My roles included data entry, cross referencing parts, and designing labeled instructions.",
+        "Involved in DRM (Disaster Recovery Mode) project which supplied lines with backup systems in case of tool/module failures. My roles included data entry, cross referencing parts, and designing labeled instructions for operator tool usage.",
       ]);
       document
         .getElementById("timhortons-selector")!
         .classList.remove("active");
       document.getElementById("chc-selector")!.classList.remove("active");
+
+      /*--------------------------------------------------------------*/
     } else if (selectorId === "chc") {
       active = document.getElementById("chc-selector");
 
-      setPosition("Introduction to BAS and HMS");
+      setPosition("Volunteer");
       setLocation("Windsor Essex Community Housing Corporation");
       setDates("Summer 2021");
       setDescription([
@@ -61,6 +71,9 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
         .classList.remove("active");
       document.getElementById("zfgroup-selector")!.classList.remove("active");
     }
+
+    /*--------------------------------------------------------------*/
+    // Add class of active to active element if it exists
     if (active !== null) {
       active.classList.add("active");
     }
@@ -73,7 +86,12 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
         <Line></Line>
       </Header>
       <WorkInfoSection>
+        {/* 
+        
+        */}
+
         <WorkLocationsSection>
+          {/* selectorId is changed onClick of any location items */}
           <LocationsList>
             <LocationItem
               id="zfgroup-selector"
@@ -102,6 +120,11 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
             </LocationItem>
           </LocationsList>
         </WorkLocationsSection>
+
+        {/* 
+        
+        */}
+
         <WorkExperienceInfo
           selectorId={selectorId}
           position={position}
@@ -151,7 +174,6 @@ const LocationsList = styled.div`
   @media (max-width: 1300px) {
     flex-direction: row;
     flex-wrap: wrap;
-    /* justify-content: center; */
     > * {
       margin: 0.2rem 0;
     }
@@ -172,7 +194,6 @@ const LocationItem = styled.p`
   @media (max-width: 1300px) {
     border-left: none;
     padding: 0.7rem 1rem;
-    /* border-bottom: 1px solid ${({ theme }) => theme.colors.primary}; */
     margin-bottom: -3px;
     margin-left: 0;
   }
