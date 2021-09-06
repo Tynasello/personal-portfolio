@@ -42,6 +42,7 @@ export const ProjectTile: React.FC<ProjectTileProps> = ({
     e.preventDefault();
 
     window.open(githubLink, "_blank");
+    e.stopPropagation();
   };
   return (
     <Container
