@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import resume from "../assets/Resume.pdf";
+import resume from "../assets/Ty_Nasello_Resume.pdf";
 import { HighlightSpan } from "./Utils/HighlightSpan";
 import { PLink } from "./Utils/PLink";
 

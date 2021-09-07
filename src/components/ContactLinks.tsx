@@ -4,7 +4,7 @@ import { FiGithub } from "react-icons/fi";
 import { BiMailSend } from "react-icons/bi";
 import { RiFilePaper2Line } from "react-icons/ri";
 
-import resume from "../assets/Resume.pdf";
+import resume from "../assets/Ty_Nasello_Resume.pdf";
 
 interface ContactLinksProps {}
 
