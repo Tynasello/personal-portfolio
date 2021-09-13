@@ -25,10 +25,10 @@ export const About: React.FC<AboutProps> = ({ id, classList }) => {
             currently seeking Winter 2022 internships.
             <br />
             <br />
-            In my free time I enjoy working on projects, solving competitive
+            In my free time, I enjoy working on projects, solving competitive
             programming problems, exercising, and playing sports. I have a
-            passion for solving complex issues and deriving solutions. Feel free
-            to contact me at any time via{" "}
+            passion for solving complex issues and obtaining solutions. Feel
+            free to contact me at any time via{" "}
             <HighlightSpan>
               <PLink href="mailto:tynasello@gmail.com" target="_blank">
                 email.{}
@@ -37,10 +37,19 @@ export const About: React.FC<AboutProps> = ({ id, classList }) => {
             I also encourage you to view my{" "}
             <HighlightSpan>
               <PLink href="https://github.com/tynasello" target="_blank">
-                github{}
+                Github
               </PLink>
             </HighlightSpan>{" "}
-            account and{" "}
+            ,{" "}
+            <HighlightSpan>
+              <PLink
+                href="https://www.linkedin.com/in/ty-nasello/"
+                target="_blank"
+              >
+                Linkedin
+              </PLink>
+            </HighlightSpan>
+            {", and "}
             <HighlightSpan>
               <PLink href={resume} target="_blank">
                 resumé.{}

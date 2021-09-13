@@ -1,5 +1,5 @@
-import React, { SyntheticEvent, useEffect, useState } from "react";
-import { Link, Redirect } from "react-router-dom";
+import React, { SyntheticEvent, useState } from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { v4 } from "uuid";
 

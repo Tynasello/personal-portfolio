@@ -4,8 +4,9 @@ import styled from "styled-components";
 import logo from "../assets/images/logo.png";
 import modalWave from "../assets/images/modalwave.svg";
 
-import { FiGithub } from "react-icons/fi";
-import { BiMailSend } from "react-icons/bi";
+import { GrLinkedinOption } from "react-icons/gr";
+import { AiOutlineGithub } from "react-icons/ai";
+import { SiMinutemailer } from "react-icons/si";
 import { RiFilePaper2Line } from "react-icons/ri";
 
 import resume from "../assets/Ty_Nasello_Resume.pdf";
@@ -73,11 +74,17 @@ export const Nav: React.FC<NavProps> = ({ projectNav }) => {
               Work Experience
             </NavLi>
             <ContactDiv>
+              <ContactLi
+                href="https://www.linkedin.com/in/ty-nasello/"
+                target="_blank"
+              >
+                <GrLinkedinOption />
+              </ContactLi>
               <ContactLi href="https://github.com/tynasello" target="_blank">
-                <FiGithub />
+                <AiOutlineGithub />
               </ContactLi>
               <ContactLi href="mailto:tynasello@gmail.com" target="_blank">
-                <BiMailSend />
+                <SiMinutemailer />
               </ContactLi>
               <ContactLi href={resume} target="_blank">
                 <RiFilePaper2Line />

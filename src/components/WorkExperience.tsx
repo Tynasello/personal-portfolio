@@ -64,7 +64,7 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
       setDates("Summer 2021");
       setDescription([
         "Introduced to and familiarized myself with various building automation system and heat management system drawings/blueprints for a local apartment complex.",
-        "Engaged in a series of meetings with the project manager discussing oppurtunities to participate in future projects.",
+        "Engaged in a series of meetings with the project manager discussing opportunities to participate in future projects.",
       ]);
       document
         .getElementById("timhortons-selector")!

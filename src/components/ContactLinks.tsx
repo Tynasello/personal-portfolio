@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { FiGithub } from "react-icons/fi";
-import { BiMailSend } from "react-icons/bi";
+import { GrLinkedinOption } from "react-icons/gr";
+import { AiOutlineGithub } from "react-icons/ai";
+import { SiMinutemailer } from "react-icons/si";
 import { RiFilePaper2Line } from "react-icons/ri";
 
 import resume from "../assets/Ty_Nasello_Resume.pdf";
@@ -12,11 +13,14 @@ export const ContactLinks: React.FC<ContactLinksProps> = () => {
   return (
     <NavContainer>
       <NavUl>
+        <NavLi href="https://www.linkedin.com/in/ty-nasello/" target="_blank">
+          <GrLinkedinOption />
+        </NavLi>
         <NavLi href="https://github.com/tynasello" target="_blank">
-          <FiGithub />
+          <AiOutlineGithub />
         </NavLi>
         <NavLi href="mailto:tynasello@gmail.com" target="_blank">
-          <BiMailSend />
+          <SiMinutemailer />
         </NavLi>
         <NavLi href={resume} target="_blank">
           <RiFilePaper2Line />
