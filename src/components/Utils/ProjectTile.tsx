@@ -143,6 +143,9 @@ const Tag = styled.p`
   }
 `;
 const Description = styled.div`
+  font-size: 1.1rem;
+  font-weight: 100;
+  line-height: 1.2;
   @media (max-width: 450px) {
     font-size: 0.8rem;
   }

@@ -45,7 +45,7 @@ export const CSProject: React.FC<CSProjectProps> = () => (
       </HighlightSpan>{" "}
       using the programming language C++. The Servo.h library promoted micro
       servo control. Both micro servos could be rotated an inputted degree
-      ammount with the use of the libraries write() function. The TCS230 color
+      amount with the use of the library's write() function. The TCS230 color
       sensor made use of the pulseIn() function which would read the sensors
       detected output color frequency. These readings were compared against
       pre-determined frequency numbers that corresponded to each color. A link

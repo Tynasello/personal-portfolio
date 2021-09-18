@@ -28,23 +28,23 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
         <ProjectTile
           title="CV Builder"
           description="
-                      A React web application to create your own CV / resumé.
+          An intuitive React web application to create your own CV/Resumé.
                       "
           img={CVProject}
-          tags={["JavaScript", "React"]}
-          color="#4A5366e6"
+          tags={["JavaScript", "React.js"]}
+          color="#F45B6Fe7"
           url="https://tynasello.github.io/cv-builder/"
           githubLink="https://github.com/Tynasello/cv-builder"
         ></ProjectTile>
 
         <ProjectTile
-          title="Blog API"
+          title="Blog REST API"
           description="
-                      A Node Express REST API for creating personal blogs.
+          A Node/Express API constructed in RESTful manner, supporting CRUD commands to a MongoDB database.
                       "
           img={APProject}
-          tags={["NodeJS", "Express", "API", "MongoDB", "JWT", "Heroku"]}
-          color="#A2A498e6"
+          tags={["Node.js", "Express.js", "API", "MongoDB", "JWT", "Heroku"]}
+          color="#4EA5D9e7"
           url="https://github.com/Tynasello/blog-api"
           githubLink="https://github.com/Tynasello/blog-api"
         ></ProjectTile>
@@ -52,11 +52,11 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
         <ProjectTile
           title="Competitive Programming Practice"
           description="
-                      Github repository containing solutions to practice programming problems I have solved or am currently working on.
+          Github repository containing solutions to practice programming problems.
                       "
           img={CPProject}
           tags={["Python"]}
-          color="#7C9A95e6"
+          color="#3581B8e7"
           url="https://github.com/Tynasello/cp-practice"
           githubLink="https://github.com/Tynasello/cp-practice"
         ></ProjectTile>
@@ -64,11 +64,11 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
         <ProjectTile
           title="Blog Frontend"
           description="
-                      A React TypeScript frontend for a blog project using custom blog API.
+                      A blog application where users can view and interact with posts. Frontend makes use of custom blog API.
                       "
           img={BFProject}
-          tags={["TypeScript", "React"]}
-          color="#BDABD4e6"
+          tags={["TypeScript", "React.js"]}
+          color="#3CBBB1e7"
           url="https://tynasello.github.io/blog-frontend/"
           githubLink="https://github.com/Tynasello/blog-frontend"
         ></ProjectTile>
@@ -76,52 +76,24 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
         <ProjectTile
           title="To-do App"
           description="
-                      A to-do list app where users can add custom tasks with their own descriptions, due dates, and priority levels.
+                      A To-do list app, delivering a simple and efficient task management interface.
                       "
           img={TDProject}
           tags={["JavaScript", "HTML/CSS", "Webpack"]}
-          color="#4B7088e6"
+          color="#7880B5e7"
           url="https://tynasello.github.io/to-do-app/"
           githubLink="https://github.com/Tynasello/to-do-app"
-        ></ProjectTile>
-
-        {/*  */}
-
-        <ProjectTile
-          title="Arduino Robot Car"
-          description="
-                        An Arduino Uno controlled Robot car that performs certain maneuvers based on input from a
-                        Bluetooth terminal application. Optional autonomous mode utilizing ultrasonic sensor.
-                      "
-          img={ACProject}
-          tags={["C++", "Arduino"]}
-          color="#0695B2e6"
-          redirect="/ARProject"
-          githubLink="https://github.com/Tynasello/arduino-robot"
-        ></ProjectTile>
-
-        <ProjectTile
-          title="Arduino Color Sorter"
-          description="
-                        An Arudino Uno controlled robot which sorts red, green, and yellow
-                        Skittles with the use of two micro servos
-                        and a TCS230 color sensor."
-          img={CSProject}
-          tags={["C++", "Arduino"]}
-          color="#906C73e6"
-          redirect="/CSProject"
-          githubLink="https://github.com/Tynasello/color-sorter"
         ></ProjectTile>
 
         <ProjectTile
           title="Flappy Bird (Recreation)"
           description="
-                        Recreating the popular game 'Flappy Bird'. I programmed
-                        the game in python utilizing the pygame library.
+                        A recreation of the popular game Flappy Bird. I programmed
+                        the game in python using the PyGame library.
                       "
           img={FBProject}
           tags={["Python", "Pygame"]}
-          color="#4E9DA1e6"
+          color="#1C77C3e7"
           redirect="/FBProject"
           githubLink="https://github.com/Tynasello/flappy-bird"
         ></ProjectTile>
@@ -129,15 +101,37 @@ export const Projects: React.FC<ProjectsProps> = ({ id, classList }) => {
         <ProjectTile
           title="Word Translation GUI"
           description="     
-                        I created a GUI (Graphical User Interface) in Python
-                        employing the PyQt5 and googletrans libraries. The GUI
+                        A Python GUI that
                         displays the translation of user inputs in selected languages.
                       "
           img={WTProject}
-          tags={["Python", "GUI", "PyQt"]}
-          color="#924C77e6"
+          tags={["Python", "GUI", "PyQt", "Googletrans"]}
+          color="#AAC0AAe7"
           redirect="/WTProject"
           githubLink="https://github.com/Tynasello/word-translator"
+        ></ProjectTile>
+
+        <ProjectTile
+          title="Arduino Robot Car"
+          description="
+                    A robot car that performs certain maneuvers based on input from a Bluetooth terminal application.
+                      "
+          img={ACProject}
+          tags={["C++", "Arduino"]}
+          color="#74B3CEe7"
+          redirect="/ARProject"
+          githubLink="https://github.com/Tynasello/arduino-robot"
+        ></ProjectTile>
+
+        <ProjectTile
+          title="Arduino Color Sorter"
+          description="
+            Skittle-sorting robot controlled by Arduino Uno with C++ programming"
+          img={CSProject}
+          tags={["C++", "Arduino"]}
+          color="#3F8EFCe7"
+          redirect="/CSProject"
+          githubLink="https://github.com/Tynasello/color-sorter"
         ></ProjectTile>
       </ProjectsContainer>
     </Container>

@@ -29,7 +29,7 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
       active = document.getElementById("timhortons-selector");
       setPosition("Service Employee");
       setLocation("Tim Hortons");
-      setDates("July 2018 - September 2021");
+      setDates("Jul 2018 - Sep 2021");
       setDescription([
         "Responsible for efficiently filling customer orders and guaranteeing customer satisfaction.",
         "Actively worked with a team of co-workers to ensure group goals were met.",
@@ -44,11 +44,11 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
 
       setPosition("Engineering Assistant");
       setLocation("ZF Group");
-      setDates("Summer 2021");
+      setDates("Jul 2021 - Sep 2021");
       setDescription([
-        "Shadowed a team of engineers at an automobile assembly plant.",
-        "Worked on distance sensor installation which fixed an existing issue of incorrect operator installation of a part.",
-        "Involved in DRM (Disaster Recovery Mode) project which supplied lines with backup systems in case of tool/module failures. My roles included data entry, cross referencing parts, and designing labeled instructions for operator tool usage.",
+        "Shadowed a team of four engineers at an automobile assembly plant.",
+        "Installed a distance sensor to fix an existing issue of incorrect part installation.",
+        "Worked on DRM (Disaster Recovery Mode) project that supplied five lines with backup systems in case of tool/module failures. Involved in data entry, cross-referencing parts, and creating labeled instructions for operator tool usage.",
       ]);
       document
         .getElementById("timhortons-selector")!
@@ -61,9 +61,9 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
 
       setPosition("Volunteer");
       setLocation("Windsor Essex Community Housing Corporation");
-      setDates("Summer 2021");
+      setDates("Aug 2021 - Sep 2021");
       setDescription([
-        "Introduced to and familiarized myself with various building automation system and heat management system drawings/blueprints for a local apartment complex.",
+        "Introduced to and reviewed various building automation systems and heat management system drawings/blueprints for a local apartment complex.",
         "Engaged in a series of meetings with the project manager discussing opportunities to participate in future projects.",
       ]);
       document
@@ -103,20 +103,21 @@ export const WorkExperience: React.FC<WorkExperienceProps> = ({
             </LocationItem>
 
             <LocationItem
-              id="timhortons-selector"
-              onClick={() => {
-                setSelectorId("timhortons");
-              }}
-            >
-              Tim Hortons
-            </LocationItem>
-            <LocationItem
               id="chc-selector"
               onClick={() => {
                 setSelectorId("chc");
               }}
             >
               Windsor CHC
+            </LocationItem>
+
+            <LocationItem
+              id="timhortons-selector"
+              onClick={() => {
+                setSelectorId("timhortons");
+              }}
+            >
+              Tim Hortons
             </LocationItem>
           </LocationsList>
         </WorkLocationsSection>

@@ -21,14 +21,13 @@ export const About: React.FC<AboutProps> = ({ id, classList }) => {
         <ContentSection>
           <ContentP>
             I am a <HighlightSpan>University of Waterloo </HighlightSpan>
-            student pursuing a degree in mechatronics engineering. I am
+            student pursuing a degree in Mechatronics Engineering. I am
             currently seeking Winter 2022 internships.
             <br />
-            <br />
-            In my free time, I enjoy working on projects, solving competitive
-            programming problems, exercising, and playing sports. I have a
-            passion for solving complex issues and obtaining solutions. Feel
-            free to contact me at any time via{" "}
+            <br />I am passionate about tackling projects that expose me to new
+            and exciting realms and ways of thinking. In my free time, I enjoy
+            learning unfamiliar technologies and solving competitive programming
+            problems. Feel free to contact me at any time via{" "}
             <HighlightSpan>
               <PLink href="mailto:tynasello@gmail.com" target="_blank">
                 email.{}
@@ -39,7 +38,7 @@ export const About: React.FC<AboutProps> = ({ id, classList }) => {
               <PLink href="https://github.com/tynasello" target="_blank">
                 Github
               </PLink>
-            </HighlightSpan>{" "}
+            </HighlightSpan>
             ,{" "}
             <HighlightSpan>
               <PLink
@@ -63,17 +62,17 @@ export const About: React.FC<AboutProps> = ({ id, classList }) => {
             <Tag>Python</Tag>
             <Tag>TypeScript</Tag>
             <Tag>JavaScript</Tag>
-            <Tag>React</Tag>
-            <Tag>NodeJS</Tag>
-            <Tag>Express</Tag>
+            <Tag>Node.js</Tag>
+            <Tag>React.js</Tag>
+            <Tag>Express.js</Tag>
             <Tag>HTML</Tag>
             <Tag>CSS</Tag>
             <Tag>C++</Tag>
-            <Tag>Java</Tag>
             <Tag>MongoDB</Tag>
             <Tag>Git</Tag>
-            <Tag>Heroku</Tag>
+            <Tag>Java</Tag>
             <Tag>Netlify</Tag>
+            <Tag>Heroku</Tag>
             <Tag>Figma</Tag>
           </TagsContainer>
         </StackSection>

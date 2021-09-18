@@ -24,6 +24,12 @@ export const FBProject: React.FC<FBProjectProps> = () => (
       programs.
       <br />
       <br />
+      The program's game loop is responsible for processing user input and
+      updating object states and game display. I created custom game events and
+      entity classes using inherited properties and methods from the PyGame
+      library's Sprite class.
+      <br />
+      <br />
       The tutorials on{" "}
       <HighlightSpan>
         <PLink href="https://realpython.com/pygame-a-primer/">
@@ -36,8 +42,8 @@ export const FBProject: React.FC<FBProjectProps> = () => (
           pythonprogramming.net{" "}
         </PLink>
       </HighlightSpan>
-      assisted me in using pygame effectively. The video below shows me running
-      the projects main.py file and me playing the game. Pressing the space bar
+      assisted me in using PyGame effectively. The video below shows me running
+      the project's main.py file and me playing the game. Pressing the space bar
       causes the bird to jump. The goal is to get through as many pipes as
       possible without making contact. As soon as the bird collides with a pipe,
       the game ends. A link to my code for this project can be found{" "}

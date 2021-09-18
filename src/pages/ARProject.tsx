@@ -32,16 +32,16 @@ export const ARProject: React.FC<ARProjectProps> = () => (
     <ProjectSubtitle>Functionality</ProjectSubtitle>
     <ProjectP>
       The Arduino is responsible for commanding all parts of the robot. The
-      robots <HighlightSpan>HC-SR04 ultrasonic sensor</HighlightSpan> and{" "}
-      <HighlightSpan>HC-08 bluetooth module</HighlightSpan> are connected to the
+      robot's <HighlightSpan>HC-SR04 ultrasonic sensor</HighlightSpan> and{" "}
+      <HighlightSpan>HC-08 Bluetooth module</HighlightSpan> are connected to the
       Arduino's analog and digital pins respectively. The Arduino is powered via
-      a USB connected powerbank. The{" "}
+      a USB-connected power bank. The{" "}
       <HighlightSpan>L293D motor controller shield </HighlightSpan> plugs into
       the top of the Arudino and operates the motors on the chassis.
       <br />
       <br />
-      All actions performed by the robot are due to input from a bluetooth
-      terminal application . When specific characters are sent via bluetooth to
+      All actions performed by the robot are due to input from a Bluetooth
+      terminal application. When specific characters are sent via Bluetooth to
       the robot's HC-08 module, corresponding actions are performed.
     </ProjectP>
     <PImg src={ARProject1} alt="ARProject1"></PImg>
@@ -56,7 +56,7 @@ export const ARProject: React.FC<ARProjectProps> = () => (
       using the programming language C++. The AFMotor.h library provided
       simultaneous speed and directional motor control The NewPing.h library
       delivered ultrasonic sensor functionality. Lastly, the SoftwareSerial.h
-      library was leveraged to allow serial communication between a bluetooth
+      library was leveraged to allow serial communication between a Bluetooth
       terminal and the Arduino via the HC-08. A link to my code for this project
       can be found{" "}
       <HighlightSpan>

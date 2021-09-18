@@ -33,8 +33,8 @@ export const WTProject: React.FC<WTProjectProps> = () => (
       <br />
       The GUI prompts a user to input a sentence. Once completed, a list of 11
       languages is given. The user's entry is then translated into the chosen
-      language and displayed. The user can then select for a different
-      translation or quit the GUI. The tutorials on{" "}
+      language and displayed. The user can then select a different translation
+      or quit the GUI. The tutorials on{" "}
       <HighlightSpan>
         <PLink href="https://realpython.com/python-pyqt-gui-calculator/">
           realpython.com{" "}
