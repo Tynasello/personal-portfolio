@@ -19,10 +19,14 @@ interface NavProps {
 
 export const Nav: React.FC<NavProps> = ({ projectNav }) => {
   const [width, setWidth] = useState(window.innerWidth);
+  const body = document.querySelector("body");
+  // body!.classList.remove("no-scroll");
+
   useEffect(() => {
     const hamburger = document.querySelector(".hamburger");
     const modalDiv = document.getElementById("modal");
     hamburger?.addEventListener("click", () => {
+      body!.classList.toggle("no-scroll");
       hamburger.classList.toggle("is-active");
       modalDiv!.classList.toggle("modal");
       modalDiv!.classList.toggle("modal-active");
@@ -32,6 +36,7 @@ export const Nav: React.FC<NavProps> = ({ projectNav }) => {
     });
   });
   const modalLinkClick = (e: SyntheticEvent) => {
+    body!.classList.toggle("no-scroll");
     const hamburger = document.querySelector(".hamburger");
     hamburger!.classList.toggle("is-active");
     document.getElementById("modal")?.classList.toggle("modal-active");
@@ -62,7 +67,7 @@ export const Nav: React.FC<NavProps> = ({ projectNav }) => {
           <span></span>
           <span></span>
         </ul>
-        <div id={"modal"} className={"modal"}>
+        <Modal id={"modal"} className={"modal"}>
           <NavUl>
             <NavLi onClick={(e) => modalLinkClick(e)} to="#about">
               About
@@ -92,7 +97,7 @@ export const Nav: React.FC<NavProps> = ({ projectNav }) => {
             </ContactDiv>
             <ModalImg src={modalWave} alt="logo"></ModalImg>
           </NavUl>
-        </div>
+        </Modal>
       </NavContainer>
     );
   }
@@ -120,7 +125,6 @@ const NavContainer = styled.div`
   align-items: center;
   font-size: 1.2rem;
   padding: 1rem 5rem;
-
   @media (max-width: 600px) {
     padding: 1rem 2rem;
   }
@@ -131,6 +135,9 @@ const LogoLink = styled.a`
 const Logo = styled.img`
   min-width: 60px;
   width: 4vw;
+`;
+const Modal = styled.div`
+  height: 100vh;
 `;
 const ModalImg = styled.img`
   position: absolute;
@@ -155,8 +162,9 @@ const NavLi = styled(HashLink)`
 const ContactDiv = styled.div`
   z-index: 12;
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
   display: none;
 
   @media (max-width: 470px) {

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { FiGithub } from "react-icons/fi";
 import { BiMailSend } from "react-icons/bi";
 import { RiFilePaper2Line } from "react-icons/ri";
+import { GrLinkedinOption } from "react-icons/gr";
 
 import resume from "../assets/Ty_Nasello_Resume.pdf";
 
@@ -12,6 +13,12 @@ export const Footer: React.FC<FooterProps> = () => {
   return (
     <Container>
       <FooterLinks>
+        <FooterLi
+          href="https://www.linkedin.com/in/ty-nasello/"
+          target="_blank"
+        >
+          <GrLinkedinOption />
+        </FooterLi>
         <FooterLi href="https://github.com/tynasello" target="_blank">
           <FiGithub />
         </FooterLi>

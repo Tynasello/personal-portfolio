@@ -181,6 +181,10 @@ const GlobalStyle = createGlobalStyle`
             }
         }
     }
+    .no-scroll{
+        height: 100%;
+        overflow: hidden;
+    }
 
 `;
 /*--------------------------------------------------------------*/
